@@ -1,660 +1,660 @@
-	****************************************Python Intro**********************************888
-	--
-	The syntax is: print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
-
-	Here,
-
-	objects is/are the values to be displayed
-	sep is the separator used between the values (defaults into a space character)
-	After all values are printed, end is printed (defaults into a new line)
-	file is the object where the values are printed (default value is sys.stdout i.e. screen)
-
-	--
-	The isinstance() function checks if the object (first argument) is an instance or a subclass of classinfo (second argument).
-
-	Its syntax is: isinstance(object, classinfo)
-
-	It returns True if the object is an instance or subclass of a class, or any element of the tuple False otherwise.
-
-	For example:
-
-	isinstance(x, int)
-	returns True
-
-	---
-	Operation	Description	Example
-	len(a)	Length	3
-	a + b	Concatenation	[1,2,3,4,5,6]
-	[a]*2	Repitition	[1,2,3,1,2,3]
-	3 in a	Membership	True
-	max(a)	Returns item from the list with max value	3
-	min(a)	Returns item from the list with min value	1
-	a.append(10)	Adds 10 to the end of the list	[1,2,3,10]
-	a.extend(b)	Appends the contents of b to a	[1,2,3,4,5,6]
-	a.index(1)	Returns the lowest index in the list that 1 appears in	0
-	a.reverse()	Reverses objects of list in place	[3,2,1]
-	a.pop()	Removes and returns last object from list	3
-	a.remove(2)	Removes object 2 from list	[1,3]
+****************************************Python Intro**********************************888
+--
+The syntax is: print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
+
+Here,
+
+objects is/are the values to be displayed
+sep is the separator used between the values (defaults into a space character)
+After all values are printed, end is printed (defaults into a new line)
+file is the object where the values are printed (default value is sys.stdout i.e. screen)
+
+--
+The isinstance() function checks if the object (first argument) is an instance or a subclass of classinfo (second argument).
+
+Its syntax is: isinstance(object, classinfo)
+
+It returns True if the object is an instance or subclass of a class, or any element of the tuple False otherwise.
+
+For example:
+
+isinstance(x, int)
+returns True
+
+---
+Operation	Description	Example
+len(a)	Length	3
+a + b	Concatenation	[1,2,3,4,5,6]
+[a]*2	Repitition	[1,2,3,1,2,3]
+3 in a	Membership	True
+max(a)	Returns item from the list with max value	3
+min(a)	Returns item from the list with min value	1
+a.append(10)	Adds 10 to the end of the list	[1,2,3,10]
+a.extend(b)	Appends the contents of b to a	[1,2,3,4,5,6]
+a.index(1)	Returns the lowest index in the list that 1 appears in	0
+a.reverse()	Reverses objects of list in place	[3,2,1]
+a.pop()	Removes and returns last object from list	3
+a.remove(2)	Removes object 2 from list	[1,3]
 
 
-	---
-	area = { 'living' : [400,450], 'bedroom' : [650, 800], 'kitchen' : [300, 250], 'garage': [250, 0]}
-	d2 = {'color' :['red','blue']}
-	area.update(d2)
-	print(area)
+---
+area = { 'living' : [400,450], 'bedroom' : [650, 800], 'kitchen' : [300, 250], 'garage': [250, 0]}
+d2 = {'color' :['red','blue']}
+area.update(d2)
+print(area)
 
-	---
-	Common Tuple Operations
-	Let us take two tuples a = (1,2) and b = (3,4) for this purpose.
-
-	Expression	Description	Example
-	len(a)	Length of tuple	2
-	a + b	Concatenation	(1,2,3,4)
-	a*4	Repitition	(1,2,1,2,1,2,1,2)
-	2 in a	Membership	True
-	max(a)	Maximum value in tuple	2
-	min(a)	Minimum value in tuple	1
-	a[0]	Indexing	1
-	a[:2]	Slicing	(1,2)
-	You cannot delete an element from tuple (as they are immutable), but you can delete the entire tuple.
-
-	--
-
-	Immutable Objects: int, float, long, complex, string, tuple, bool
+---
+Common Tuple Operations
+Let us take two tuples a = (1,2) and b = (3,4) for this purpose.
+
+Expression	Description	Example
+len(a)	Length of tuple	2
+a + b	Concatenation	(1,2,3,4)
+a*4	Repitition	(1,2,1,2,1,2,1,2)
+2 in a	Membership	True
+max(a)	Maximum value in tuple	2
+min(a)	Minimum value in tuple	1
+a[0]	Indexing	1
+a[:2]	Slicing	(1,2)
+You cannot delete an element from tuple (as they are immutable), but you can delete the entire tuple.
+
+--
+
+Immutable Objects: int, float, long, complex, string, tuple, bool
 
-	Mutable Objects: list, dict, set, byte array, user-defined classes
-
+Mutable Objects: list, dict, set, byte array, user-defined classes
+
 
-	Checking mutability of Objects
-	Through "is" funcation -- Which checks identity of objects.
-	or with id() funcation which return value of memory location.
-
-	For example :
-	#initial variable
-	a = 50
-	# initial memory location
-	print(id(a))
-	#modified variable
-	a += 1
-	# new memory location, is it same?
-	print(id(a))
-	Output
+Checking mutability of Objects
+Through "is" funcation -- Which checks identity of objects.
+or with id() funcation which return value of memory location.
+
+For example :
+#initial variable
+a = 50
+# initial memory location
+print(id(a))
+#modified variable
+a += 1
+# new memory location, is it same?
+print(id(a))
+Output
 
-	94285850046496
-	94285850046528
+94285850046496
+94285850046528
 
-	and LIST
+and LIST
 
-	# intial list
-	l = [1,2,3,4]
-	# initial memory location
-	print(id(l))
-	print('='*20)
-	# new list
-	l.append(5)
-	print(l)
-	print('='*20)
-	# new memory location
-	print(id(l))
-	Output
+# intial list
+l = [1,2,3,4]
+# initial memory location
+print(id(l))
+print('='*20)
+# new list
+l.append(5)
+print(l)
+print('='*20)
+# new memory location
+print(id(l))
+Output
 
-	139678448773256
-	====================
-	[1, 2, 3, 4, 5]
-	====================
-	139678448773256
+139678448773256
+====================
+[1, 2, 3, 4, 5]
+====================
+139678448773256
 
 
 
-	*******************************************
+*******************************************
 
-	Summarizing Data with Statistics
+Summarizing Data with Statistics
 
-	Mean Absoulte Deviation : MAD : To understand deviation of data from Central point. Note : Absoulte Deviation
-	Code :
-	mean=df['SalePrice'].mean()
-	c=df['SalePrice'].count()
-	distance=sum(np.abs(df['SalePrice']- mean))
-	mad=distance/c;
-	print(mad)
+Mean Absoulte Deviation : MAD : To understand deviation of data from Central point. Note : Absoulte Deviation
+Code :
+mean=df['SalePrice'].mean()
+c=df['SalePrice'].count()
+distance=sum(np.abs(df['SalePrice']- mean))
+mad=distance/c;
+print(mad)
 
 
-	Standard Deviation:
-	For quantitative data we can use MAD, Standard Deviation or variance as measures of dispersion. The standard deviation is usually preferable
+Standard Deviation:
+For quantitative data we can use MAD, Standard Deviation or variance as measures of dispersion. The standard deviation is usually preferable
 
-	Catch : However, the standard deviation (or variance) isn’t appropriate when there are extreme scores and/or skewness in your data set. In this situation the interquartile range (to be covered in next topics) is usually preferable.
+Catch : However, the standard deviation (or variance) isn’t appropriate when there are extreme scores and/or skewness in your data set. In this situation the interquartile range (to be covered in next topics) is usually preferable.
 
 
-	Coeffient of Variance:
-	it is relative measure of dispersion.
-	garage_cv = (garage_std/garage_mean)*100;
-	lot_cv = (lot_std/lot_mean)*100;
+Coeffient of Variance:
+it is relative measure of dispersion.
+garage_cv = (garage_std/garage_mean)*100;
+lot_cv = (lot_std/lot_mean)*100;
 
-	IQR : q1=df['SalePrice'].quantile(q=0.25)
-	q3=df['SalePrice'].quantile(q=0.75)
-	iqr=q3-q1
+IQR : q1=df['SalePrice'].quantile(q=0.25)
+q3=df['SalePrice'].quantile(q=0.75)
+iqr=q3-q1
 
 
-	Covariance:
-	Covariance helps us quantify how much two variables vary with respect to one another and how two variables are related. A positive covariance indicates that they move in the same direction, on the other hand negative correlation indicates that they move in opposite directions.
+Covariance:
+Covariance helps us quantify how much two variables vary with respect to one another and how two variables are related. A positive covariance indicates that they move in the same direction, on the other hand negative correlation indicates that they move in opposite directions.
 
-	mean_lotarea = new['LotArea'].mean()
-	mean_saleprice = new['SalePrice'].mean()
-	diff_lotarea = (new['LotArea']-mean_lotarea)
-	diff_saleprice=(new['SalePrice']-mean_saleprice)
-	summation = (diff_lotarea*diff_saleprice).sum()
-	n = new.shape[0]
-	covariance = summation/n
-	print('Mean of LotArea : ', mean_lotarea)
-	print('Mean of SalePrice : ', mean_saleprice)
-	print('Covariance : ',covariance)
-	*******
+mean_lotarea = new['LotArea'].mean()
+mean_saleprice = new['SalePrice'].mean()
+diff_lotarea = (new['LotArea']-mean_lotarea)
+diff_saleprice=(new['SalePrice']-mean_saleprice)
+summation = (diff_lotarea*diff_saleprice).sum()
+n = new.shape[0]
+covariance = summation/n
+print('Mean of LotArea : ', mean_lotarea)
+print('Mean of SalePrice : ', mean_saleprice)
+print('Covariance : ',covariance)
+*******
 
-	Kurtosis:
-	The other measure that describes the shape of a distribution is called as kurtosis
+Kurtosis:
+The other measure that describes the shape of a distribution is called as kurtosis
 
-	The kurtosis of a normal distribution is 3, most of the statistical packages report excess kurtosis over the normal distribution.
+The kurtosis of a normal distribution is 3, most of the statistical packages report excess kurtosis over the normal distribution.
 
-	A normal distribution has kurtosis exactly 3 (excess kurtosis exactly 0). Any distribution with kurtosis ≈3 (excess ≈0) is called mesokurtic.
-	A distribution with kurtosis <3 (excess kurtosis <0) is called platykurtic. Compared to a normal distribution, its tails are shorter and thinner, and often its central peak is lower and broader.
-	A distribution with kurtosis >3 (excess kurtosis >0) is called leptokurtic. Compared to a normal distribution, its tails are longer and fatter, and often its central peak is higher and sharper.
-	Two or more distributions may have identical mean, variation and skewness but they may show different degress of kurtosis. Follwing chart describes the different values of kurtosis and their respective names.
+A normal distribution has kurtosis exactly 3 (excess kurtosis exactly 0). Any distribution with kurtosis ≈3 (excess ≈0) is called mesokurtic.
+A distribution with kurtosis <3 (excess kurtosis <0) is called platykurtic. Compared to a normal distribution, its tails are shorter and thinner, and often its central peak is lower and broader.
+A distribution with kurtosis >3 (excess kurtosis >0) is called leptokurtic. Compared to a normal distribution, its tails are longer and fatter, and often its central peak is higher and sharper.
+Two or more distributions may have identical mean, variation and skewness but they may show different degress of kurtosis. Follwing chart describes the different values of kurtosis and their respective names.
 
 
-	Correlation:
-	Correlation between two variables is said to be positive when their values change in the same direction and negative when their values change in opposite directions. Value of a correlation coefficient lies between -1 to 1, -1 being perfectly negatively correlated and 1 being perfectly positively correlated
+Correlation:
+Correlation between two variables is said to be positive when their values change in the same direction and negative when their values change in opposite directions. Value of a correlation coefficient lies between -1 to 1, -1 being perfectly negatively correlated and 1 being perfectly positively correlated
 
-	Karl Person co-efficient:
-	Pearson's correlation coefficient is used only when two variables are linearly related
-	The value of the coefficient is affected by the extreme values in the dataset
-	Computation is complex and takes more computation time
-	Pearson's correlation should be used only if data is normally distributed, extreme values in data affects the value of the coefficient
+Karl Person co-efficient:
+Pearson's correlation coefficient is used only when two variables are linearly related
+The value of the coefficient is affected by the extreme values in the dataset
+Computation is complex and takes more computation time
+Pearson's correlation should be used only if data is normally distributed, extreme values in data affects the value of the coefficient
 
-	CO-relation robust to outlier : Spearmen
+CO-relation robust to outlier : Spearmen
 
 
 
-	**************
-	Model Performance:
-	We have a regression problem at hand and the different types of error metrics that can be used are:
+**************
+Model Performance:
+We have a regression problem at hand and the different types of error metrics that can be used are:
 
-	Mean Absolute Error (MAE)
-	Root Mean Squared Error (RMSE)
-	R-Squared
+Mean Absolute Error (MAE)
+Root Mean Squared Error (RMSE)
+R-Squared
 
-	from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_absolute_error
 
-	# MAE calculation
-	mae = mean_absolute_error(y_test, y_pred)
+# MAE calculation
+mae = mean_absolute_error(y_test, y_pred)
 
 
 
-	RMSE :
-	Why are we squaring the Residuals and then taking a root?
+RMSE :
+Why are we squaring the Residuals and then taking a root?
 
-	Residuals can be positive or negative as the predicted value underestimates or overestimates the actual value
+Residuals can be positive or negative as the predicted value underestimates or overestimates the actual value
 
-	Thus to just focus on the magnitude of the error we take the square of the difference as it's always positive
+Thus to just focus on the magnitude of the error we take the square of the difference as it's always positive
 
-	So you may wonder what is the advantage of RMSE when we could just take the absolute difference instead of squaring
+So you may wonder what is the advantage of RMSE when we could just take the absolute difference instead of squaring
 
-	RMSE severely punishes large differences in prediction. This is the reason why RMSE is powerful as compared to Absolute Error.
+RMSE severely punishes large differences in prediction. This is the reason why RMSE is powerful as compared to Absolute Error.
 
-	Evaluating the RMSE and tuning our model to minimize it results in a more robust model.
+Evaluating the RMSE and tuning our model to minimize it results in a more robust model.
 
 
-	R-Squared:
-	-squared is a statistical measure of how close the data are to the fitted regression line i.e. it measures the goodness of fit of a straight line. It is also known as the coefficient of determination, or the coefficient of multiple determination for multiple regression.
+R-Squared:
+-squared is a statistical measure of how close the data are to the fitted regression line i.e. it measures the goodness of fit of a straight line. It is also known as the coefficient of determination, or the coefficient of multiple determination for multiple regression.
 
-	R-squared is always between 0 and 100%:
+R-squared is always between 0 and 100%:
 
-	R-squared tells you how well your model fits the data points whereas Adjusted R-squared tells you how important is a particular feature to your model.
+R-squared tells you how well your model fits the data points whereas Adjusted R-squared tells you how important is a particular feature to your model.
 
-	**
-	from sklearn.metrics import r2_score
+**
+from sklearn.metrics import r2_score
 
-	# Code starts here
+# Code starts here
 
-	# R-squared calculation
-	rsquared = r2_score(y_test, np.exp(y_pred))
-	print(rsquared)
-	**
+# R-squared calculation
+rsquared = r2_score(y_test, np.exp(y_pred))
+print(rsquared)
+**
 
 
 
 
-	Linear Regression:
+Linear Regression:
 
-	Y(true)=Y(predict)+Error
-	Y(predict)=theta*x
-	goal is not find theta such that Error can be minimized.
+Y(true)=Y(predict)+Error
+Y(predict)=theta*x
+goal is not find theta such that Error can be minimized.
 
-	Assumption in Linear Regression:
-	-According to this assumption the relationship between response (Dependent Variables) and feature variables (Independent Variables) should be linear
-	how to check: Using Scatter plot
+Assumption in Linear Regression:
+-According to this assumption the relationship between response (Dependent Variables) and feature variables (Independent Variables) should be linear
+how to check: Using Scatter plot
 
 
-	Little or No autocorrelation in residuals::
-	There should be little or no autocorrelation in the data. Autocorrelation occurs when the residual errors are not independent from each other.
+Little or No autocorrelation in residuals::
+There should be little or no autocorrelation in the data. Autocorrelation occurs when the residual errors are not independent from each other.
 
 
-	Why you should care about these assumptions?
+Why you should care about these assumptions?
 
-	In a nutshell, your linear model should produce residuals that have a constant variance and are normally distributed, features are not correlated with themselves or other features etc. If these assumptions hold true, the OLS procedure (discussed in the next chapter) creates the best possible estimates for the coefficients of linear regression.
+In a nutshell, your linear model should produce residuals that have a constant variance and are normally distributed, features are not correlated with themselves or other features etc. If these assumptions hold true, the OLS procedure (discussed in the next chapter) creates the best possible estimates for the coefficients of linear regression.
 
-	Another benefit of satisfying these assumptions is that as the sample size increases to infinity, the coefficient estimates converge on the actual population parameters.
+Another benefit of satisfying these assumptions is that as the sample size increases to infinity, the coefficient estimates converge on the actual population parameters.
 
 
 
-	**BIAS_VARIANCE TRADE_OFF****
-	By now, you already have a brief idea about predictive models - you preprocess the data (clean, remove outliers, skewness etc.), fit a model, and make prediction on it. Then you will calculate the error metric and try to find the best model that minimizes this error. This error is made up of three parts:
+**BIAS_VARIANCE TRADE_OFF****
+By now, you already have a brief idea about predictive models - you preprocess the data (clean, remove outliers, skewness etc.), fit a model, and make prediction on it. Then you will calculate the error metric and try to find the best model that minimizes this error. This error is made up of three parts:
 
-	Error due to squared bias
-	Error due to variance
-	Irreducible error
-	Mathematically,
+Error due to squared bias
+Error due to variance
+Irreducible error
+Mathematically,
 
-	Error(x) = {Bias}^2 + Variance + Irreducible Error
-	Error(x)=Bias
-	2
-	 +Variance+IrreducibleError
+Error(x) = {Bias}^2 + Variance + Irreducible Error
+Error(x)=Bias
+2
+ +Variance+IrreducibleError
 
-	Irreducible error is also known as noise, and it can't be reduced by your choice in algorithm. It typically comes from inherent randomness, a misframed problem, or an incomplete feature set. So, we will discuss what is bias and variance and also the trade-off required in order to find a good model.
+Irreducible error is also known as noise, and it can't be reduced by your choice in algorithm. It typically comes from inherent randomness, a misframed problem, or an incomplete feature set. So, we will discuss what is bias and variance and also the trade-off required in order to find a good model.
 
-	Error due to squared bias: Simply put, bias is the difference between your model's expected predictions and the true values. Expected predictions mean that you are averaging the predictions of the model (if you repeat the entire model building process on new random data multiple times). Due to the inherent randomness in the data, there is bound to be a range for predictions. Bias measures how far off are the predictions from the true values. Bias error arises due to incorrect assumptions in our learning algorithm which makes it hard to learn true relationships between independent and dependent variables.
+Error due to squared bias: Simply put, bias is the difference between your model's expected predictions and the true values. Expected predictions mean that you are averaging the predictions of the model (if you repeat the entire model building process on new random data multiple times). Due to the inherent randomness in the data, there is bound to be a range for predictions. Bias measures how far off are the predictions from the true values. Bias error arises due to incorrect assumptions in our learning algorithm which makes it hard to learn true relationships between independent and dependent variables.
 
-	A low bias model is one that can be highly flexible and has the capacity to fit a variety of different shapes and patterns. A high bias model would be unable to estimate values close to their true values. Models with high bias always lead to high error on training and test data.
+A low bias model is one that can be highly flexible and has the capacity to fit a variety of different shapes and patterns. A high bias model would be unable to estimate values close to their true values. Models with high bias always lead to high error on training and test data.
 
-	bias
+bias
 
-	In the preceding image, no matter how many more data points we add, we simply won't be able to fit a straight line because it is unable to capture non-linear trends. In other words, we can say that the model is underfitting the data.
+In the preceding image, no matter how many more data points we add, we simply won't be able to fit a straight line because it is unable to capture non-linear trends. In other words, we can say that the model is underfitting the data.
 
-	Error due to variance: Variance is the degree of fluctuation of a data point for different model predictions (assuming we repeat the entire model building process on new random data multiple times). Model with high variance pays a lot of attention to training data and does not generalize on the data it hasn’t seen before. As a result, such models perform very well on training data but have high error rates on test data.
+Error due to variance: Variance is the degree of fluctuation of a data point for different model predictions (assuming we repeat the entire model building process on new random data multiple times). Model with high variance pays a lot of attention to training data and does not generalize on the data it hasn’t seen before. As a result, such models perform very well on training data but have high error rates on test data.
 
-	variance
+variance
 
-	In the image above the model is capturing almost every data point and learns too much; however, when we test it on unseen data, it will not generalize well and will produces a high error. This phenomenon is also called overfitting.
+In the image above the model is capturing almost every data point and learns too much; however, when we test it on unseen data, it will not generalize well and will produces a high error. This phenomenon is also called overfitting.
 
-	Linear models in general have high bias because of its inability to capture non-linear patterns.
+Linear models in general have high bias because of its inability to capture non-linear patterns.
 
-	Graphical Representation of Bias-variance
-	bvgraph
+Graphical Representation of Bias-variance
+bvgraph
 
-	The preceding image is a graphical visualization of bias and variance using a bulls-eye diagram. Here, the center of the target is a model that perfectly predicts the correct values. As we move away from the bulls-eye, our predictions get worse and worse. Now, imagine that we can repeat our entire model building process to get a number of separate hits on the target. Each hit represents an individual realization of our model, given the chance variability in the training data we gather. Sometimes, we will get a good distribution of training data so we will predict very well and we are close to the bulls-eye, while sometimes our training data may be full of outliers or non-standard values that result in poorer predictions. These different realizations result in a scatter of hits on the target.
+The preceding image is a graphical visualization of bias and variance using a bulls-eye diagram. Here, the center of the target is a model that perfectly predicts the correct values. As we move away from the bulls-eye, our predictions get worse and worse. Now, imagine that we can repeat our entire model building process to get a number of separate hits on the target. Each hit represents an individual realization of our model, given the chance variability in the training data we gather. Sometimes, we will get a good distribution of training data so we will predict very well and we are close to the bulls-eye, while sometimes our training data may be full of outliers or non-standard values that result in poorer predictions. These different realizations result in a scatter of hits on the target.
 
 
-	MODEL COMPLEXCITY:::
-	Definition: Model complexity can be defined as a function of number of free parameters; the more free parameters a model has, the more complex the model is. In a dataset the free parameters are the independent variables (features) ,and so model complexity increases with the increasing number of features and vice-versa.
+MODEL COMPLEXCITY:::
+Definition: Model complexity can be defined as a function of number of free parameters; the more free parameters a model has, the more complex the model is. In a dataset the free parameters are the independent variables (features) ,and so model complexity increases with the increasing number of features and vice-versa.
 
-	Relationship Between Model Complexity and Bias-variance
+Relationship Between Model Complexity and Bias-variance
 
-	Understand it this way: the more number of features you have, the more the model will remember the patterns and hence more will be the variance. On the other hand, if you decrease the number of features at hand, you are reducing the memory power of the model (you are reducing variance); however, if you do it too much, it may ultimately lead to a generalization where the variance is very low but the bias is very high. The bias increases because you are having too many restrictions by reducing the number of features. So, while we try to reduce the variance, bias increases and vice-versa. There is a trade-off between the two, which is shown in the graph below:
+Understand it this way: the more number of features you have, the more the model will remember the patterns and hence more will be the variance. On the other hand, if you decrease the number of features at hand, you are reducing the memory power of the model (you are reducing variance); however, if you do it too much, it may ultimately lead to a generalization where the variance is very low but the bias is very high. The bias increases because you are having too many restrictions by reducing the number of features. So, while we try to reduce the variance, bias increases and vice-versa. There is a trade-off between the two, which is shown in the graph below:
 
-	model_complexity
+model_complexity
 
-	The above image captures the total error on the test data. Observe that by increasing model complexity, the bias decreases while variance increases. At the same time the total error continues to go down until a point and from there onwards it shoots upwards. Sometimes, this point is also called Sweet-Spot, a point or condition which we always try to achieve by balancing bias and variance.
+The above image captures the total error on the test data. Observe that by increasing model complexity, the bias decreases while variance increases. At the same time the total error continues to go down until a point and from there onwards it shoots upwards. Sometimes, this point is also called Sweet-Spot, a point or condition which we always try to achieve by balancing bias and variance.
 
 
 
-	MODEL WITH HIGH BIAS::
-	Model with high
-	bias: A model with high bias will have a high training set error because the average value of predictions are far off the true values. Now, if we increase the size of the training set, the training error will not decrease too much due to incorrect assumptions of the model. As a result, it will fare poorly during the prediction phase as well. And, obviously, the test set error will be bad since the model hasn't learned properly. It will decrease initially until a point where the decrease becomes almost non-existent.
+MODEL WITH HIGH BIAS::
+Model with high
+bias: A model with high bias will have a high training set error because the average value of predictions are far off the true values. Now, if we increase the size of the training set, the training error will not decrease too much due to incorrect assumptions of the model. As a result, it will fare poorly during the prediction phase as well. And, obviously, the test set error will be bad since the model hasn't learned properly. It will decrease initially until a point where the decrease becomes almost non-existent.
 
-	Model with high variance: Now, a learning algorithm high variance will have a low training set error because it learns almost everything from data points. As we increase the training set size, it will try to incorporate learnings from the new data points and find some general settings, due to which the training set error increases slightly. The new learnings improve the generalization capability of the algorithm, due to which the test set error decreases.
+Model with high variance: Now, a learning algorithm high variance will have a low training set error because it learns almost everything from data points. As we increase the training set size, it will try to incorporate learnings from the new data points and find some general settings, due to which the training set error increases slightly. The new learnings improve the generalization capability of the algorithm, due to which the test set error decreases.
 
-	To summarize our discussions so far: Adding more training instances to a high bias model won't help too much but it can help in case of a high variance model.
+To summarize our discussions so far: Adding more training instances to a high bias model won't help too much but it can help in case of a high variance model.
 
-	Motivation to Use Regularization
+Motivation to Use Regularization
 
-	Regularization is the method by which you can address the problem of overfitting. To reduce overfitting you can either try reducing the model complexity or increasing the training set size. Regularization achieves exactly that by reducing the model complexity and you will see how in the next chapter!
+Regularization is the method by which you can address the problem of overfitting. To reduce overfitting you can either try reducing the model complexity or increasing the training set size. Regularization achieves exactly that by reducing the model complexity and you will see how in the next chapter!
 
 
 
 
-	**Inferential Statistics***
+**Inferential Statistics***
 
 
 
-	Feature Selection ::(copynote as well)
+Feature Selection ::(copynote as well)
 
-	Univariate feature selection methods examine -
-	the predictive power of individual features
-	the strength of the relationship of the feature with the response variable
-	These methods are simple to run and understand
-	They also prove to be good for gaining a better understanding of data, and can often be the starting point for multivariate feature selection methods
+Univariate feature selection methods examine -
+the predictive power of individual features
+the strength of the relationship of the feature with the response variable
+These methods are simple to run and understand
+They also prove to be good for gaining a better understanding of data, and can often be the starting point for multivariate feature selection methods
 
 
-	1)
-	Method 1 : Removing features with low variance
-	One of the most basic, yet a very powerful feature selection technique is to remove features with low variance.
-	We want to remove all features whose variance doesn't meet some threshold
-	For example, a feature with 0 variance means it has the same value for every sample. This means that such a feature would not bring any predictive power to the model.
-	Hence, we should remove all such zero-variance features
+1)
+Method 1 : Removing features with low variance
+One of the most basic, yet a very powerful feature selection technique is to remove features with low variance.
+We want to remove all features whose variance doesn't meet some threshold
+For example, a feature with 0 variance means it has the same value for every sample. This means that such a feature would not bring any predictive power to the model.
+Hence, we should remove all such zero-variance features
 
 
-	Let's take a dataset with boolean features, and we want to remove all features that are either one or zero (on or off) in more than 80% of the samples. How do we that?
+Let's take a dataset with boolean features, and we want to remove all features that are either one or zero (on or off) in more than 80% of the samples. How do we that?
 
-	Answer : Boolean features are Bernoulli random variables, and the variance of such variables is given by $$ Var(x) = p(1-p) $$
+Answer : Boolean features are Bernoulli random variables, and the variance of such variables is given by $$ Var(x) = p(1-p) $$
 
-	from sklearn.feature_selection import VarianceThreshold is a handy method to remove such features
-	from sklearn.feature_selection import VarianceThreshold
-	X = [[0, 0, 1], [0, 1, 0], [1, 0, 0], [0, 1, 1], [0, 1, 0], [0, 1, 1]]
-	sel = VarianceThreshold(threshold=(.8 * (1 - .8)))
-	sel.fit_transform(X)
+from sklearn.feature_selection import VarianceThreshold is a handy method to remove such features
+from sklearn.feature_selection import VarianceThreshold
+X = [[0, 0, 1], [0, 1, 0], [1, 0, 0], [0, 1, 1], [0, 1, 0], [0, 1, 1]]
+sel = VarianceThreshold(threshold=(.8 * (1 - .8)))
+sel.fit_transform(X)
 
 
 
 
-	Logistic Regression::
-	Sigmoid function doesn't get impair with outliers.
+Logistic Regression::
+Sigmoid function doesn't get impair with outliers.
 
 
 
-	f1 = f1_score(y_test, rf.predict(X_test))
-	precision = precision_score(y_test, rf.predict(X_test))
-	recall = recall_score(y_test, rf.predict(X_test))
-	roc_auc = roc_auc_score(y_test, rf.predict(X_test))
-	print(confusion_matrix(y_test,y_pred))
-	print(classification_report(y_test,y_pred))
+f1 = f1_score(y_test, rf.predict(X_test))
+precision = precision_score(y_test, rf.predict(X_test))
+recall = recall_score(y_test, rf.predict(X_test))
+roc_auc = roc_auc_score(y_test, rf.predict(X_test))
+print(confusion_matrix(y_test,y_pred))
+print(classification_report(y_test,y_pred))
 
 
 
 
 
 
-	*************
+*************
 
-	Support Vector Machine Algorithm
+Support Vector Machine Algorithm
 
-	Convert Data in to hyperplane to find decision boundary.
-	Kernel trick actually helps in converting data to N dimensional spaces without actul changing it. It finds dot product.
+Convert Data in to hyperplane to find decision boundary.
+Kernel trick actually helps in converting data to N dimensional spaces without actul changing it. It finds dot product.
 
-	Two types of Kernel are generally use : Linear or RBF Kernel.
-	Lin
+Two types of Kernel are generally use : Linear or RBF Kernel.
+Lin
 
-	C: Control High and Low Margin classifier range :  Low C--> Soft Margin and High C--> Hard Margin
-	Clean data ---> Hard Margin seems good choice
-	Noisy Data --> Need to tune value of C based on Hard to Soft margin.. As Hard margin classfier doesnt exist with noisy data
+C: Control High and Low Margin classifier range :  Low C--> Soft Margin and High C--> Hard Margin
+Clean data ---> Hard Margin seems good choice
+Noisy Data --> Need to tune value of C based on Hard to Soft margin.. As Hard margin classfier doesnt exist with noisy data
 
-	Larger C : Lower Bias , High Variance
-	Lower C : High Variance  , low Bias
+Larger C : Lower Bias , High Variance
+Lower C : High Variance  , low Bias
 
-	In short --> it is misclassification alllow factor
+In short --> it is misclassification alllow factor
 
-	SVM-->Need to have scale data as input
+SVM-->Need to have scale data as input
 
-	Kernel : Linear Kernel == LinearSVC()
-	Kernel : Poly ---> Hyper-Parameter : Q : Higher the value more over-fitting you will get.
-	Kernel : "RBGF" : Hyper-Parameter :-Gamma : in RBG Kernel : Controls the impact of Near and Far points : Low Gamma--> Consider Farthest point and High Gamma --> Consider near by point
-	Small Gamma : low bias and high variance
-	Large Gamme : High bias and low variance
+Kernel : Linear Kernel == LinearSVC()
+Kernel : Poly ---> Hyper-Parameter : Q : Higher the value more over-fitting you will get.
+Kernel : "RBGF" : Hyper-Parameter :-Gamma : in RBG Kernel : Controls the impact of Near and Far points : Low Gamma--> Consider Farthest point and High Gamma --> Consider near by point
+Small Gamma : low bias and high variance
+Large Gamme : High bias and low variance
 
-	****
-	Decision Tree Classifier:
+****
+Decision Tree Classifier:
 
-	Hyper Parameter : Depth of Tree : Pruning can be used to overcome overfiitting
-					  Min Leaf samples : this can be used to control over fitting
+Hyper Parameter : Depth of Tree : Pruning can be used to overcome overfiitting
+                  Min Leaf samples : this can be used to control over fitting
 
 
-	Balancing data is must before using DecisionTreeClassifier 	
+Balancing data is must before using DecisionTreeClassifier 	
 
-	When to use a decision tree
+When to use a decision tree
 
-	Decision tree are very easy to understand and every result provided is interpretable. Whenever for the task, the end user needs justification as to why a label has been given, decision tree is the best choice.
-	When not to use a decision tree
+Decision tree are very easy to understand and every result provided is interpretable. Whenever for the task, the end user needs justification as to why a label has been given, decision tree is the best choice.
+When not to use a decision tree
 
-	Decision trees tend to overfit on complex data with lots of attributes.			  
+Decision trees tend to overfit on complex data with lots of attributes.			  
 
-	****
-	Ensemable Techniques:
-	Voting :  simple aggregating
-	Bagging : Bootstrap ==True
-	pasting : Bootstrap == False
+****
+Ensemable Techniques:
+Voting :  simple aggregating
+Bagging : Bootstrap ==True
+pasting : Bootstrap == False
 
-	Stacking :  instea of naive aggregationg ,use Meta classifier for final prediction.
-	from mlxtend.classifier import StackingClassifier
+Stacking :  instea of naive aggregationg ,use Meta classifier for final prediction.
+from mlxtend.classifier import StackingClassifier
 
-	classifier1 = DecisionTreeClassifier(random_state=0)
-	classifier2= DecisionTreeClassifier(random_state=1)
-	classifier3 = DecisionTreeClassifier(random_state=2)
-	classifier4= DecisionTreeClassifier(random_state=3)
-	classifier_list=[classifier1,classifier2,classifier3,classifier4]
+classifier1 = DecisionTreeClassifier(random_state=0)
+classifier2= DecisionTreeClassifier(random_state=1)
+classifier3 = DecisionTreeClassifier(random_state=2)
+classifier4= DecisionTreeClassifier(random_state=3)
+classifier_list=[classifier1,classifier2,classifier3,classifier4]
 
-	m_classifier=LogisticRegression(random_state=0)
+m_classifier=LogisticRegression(random_state=0)
 
-	# Code starts here
-	sclf=StackingClassifier(classifiers=classifier_list,meta_classifier=m_classifier)
-	sclf.fit(X_train,y_train)
-	s_score =sclf.score(X_test,y_test)
-	print(s_score )
+# Code starts here
+sclf=StackingClassifier(classifiers=classifier_list,meta_classifier=m_classifier)
+sclf.fit(X_train,y_train)
+s_score =sclf.score(X_test,y_test)
+print(s_score )
 
-	**
-	Random forest algorithm:
+**
+Random forest algorithm:
 
-	Can handle missing values
-	improvement in overfitting
-	works well with many parameter
+Can handle missing values
+improvement in overfitting
+works well with many parameter
 
 
-	Hyper Parameter : N_estimator : No of tree in forest, 
-					  feature : no of feature to be selected for each tree 
-					  depth : depth of tree
+Hyper Parameter : N_estimator : No of tree in forest, 
+                  feature : no of feature to be selected for each tree 
+				  depth : depth of tree
 
 
-	Advantage : Overcome overfitting (high variance) problem
-	N_estimator : No of treee you want to generate
-	max_features : no of features per selection
+Advantage : Overcome overfitting (high variance) problem
+N_estimator : No of treee you want to generate
+max_features : no of features per selection
 
-	***
+***
 
 
-	Adaboost
-	Passing error to subsequence model and train on error part of the model .. In essenec, carry forwardin error and train the model.
-	By Default Adaboost takes , depth =1 however through sklearn you can change it per your covinience.
+Adaboost
+Passing error to subsequence model and train on error part of the model .. In essenec, carry forwardin error and train the model.
+By Default Adaboost takes , depth =1 however through sklearn you can change it per your covinience.
 
 
-	Gradient Boosting Algoritham(GBM) : 
-	Unlike Adaboost , it can use any loss funcation that is other than Exponetial loass function.
+Gradient Boosting Algoritham(GBM) : 
+Unlike Adaboost , it can use any loss funcation that is other than Exponetial loass function.
 
-	Hyper Parameter :
+Hyper Parameter :
 
-	Algorithm-Specific Parameters: These affect each individual tree in the model
+Algorithm-Specific Parameters: These affect each individual tree in the model
 
-	Training Parameters: These affect the boosting operation in the model
+Training Parameters: These affect the boosting operation in the model
 
-	Miscellaneous Parameters: Other parameters for overall functioning
+Miscellaneous Parameters: Other parameters for overall functioning
 
 
-	Algorithm specific parameters()
+Algorithm specific parameters()
 
-	min\samples\splitmin_samples_split :
+min\samples\splitmin_samples_split :
 
-	minimum number of samples required at a node to be considered for further splitting.
-	Controls over-fitting.
-	Higher values prevent a model from learning relations which might be highly specific to the particular sample selected for a tree.
-	Too high values can lead to under-fitting hence, it should be tuned using cross validation.
-	min\samples\leafmin_samples_leaf :
+minimum number of samples required at a node to be considered for further splitting.
+Controls over-fitting.
+Higher values prevent a model from learning relations which might be highly specific to the particular sample selected for a tree.
+Too high values can lead to under-fitting hence, it should be tuned using cross validation.
+min\samples\leafmin_samples_leaf :
 
-	minimum samples required in a terminal node or leaf.
-	Controls over-fitting.
-	Generally lower values should be chosen for imbalanced class problems because the regions in which the minority class will be in majority will be very small.
-	max\_depthmax_depth :
+minimum samples required in a terminal node or leaf.
+Controls over-fitting.
+Generally lower values should be chosen for imbalanced class problems because the regions in which the minority class will be in majority will be very small.
+max\_depthmax_depth :
 
-	The maximum depth of a tree.
-	Controls over-fitting as higher depth will allow model to learn relations very specific to a particular sample.
-	Should be tuned using CV.
-	max\_featuresmax_features:
+The maximum depth of a tree.
+Controls over-fitting as higher depth will allow model to learn relations very specific to a particular sample.
+Should be tuned using CV.
+max\_featuresmax_features:
 
-	The number of features to consider while searching for a best split.
-	These will be randomly selected.
-	As a thumb-rule, square root of the total number of features works great but we should check upto 30-40% of the total number of features.
-	Higher values may lead to over-fitting
-	Training parameters
-	learning_rate :
-	Determines the impact of each tree on the final outcome. GBM works by starting with an initial estimate which is updated using the output of each tree.
-	The learning parameter controls the magnitude of this change in the estimates.
-	Lower values are generally preferred as they make the model robust to the specific characteristics of tree and thus allowing it to generalize well.
-	Lower values would require higher number of trees to model all the relations and will be computationally expensive.
-	n_estimators :
-	The number of sequential trees to be modeled
-	More robust at higher number of trees but it can still overfit at a point.
-	Hence, this should be tuned using CV for a particular learning rate.
-	subsample
-	The fraction of observations to be selected for each tree. Selection is done by random.
-	Values slightly less than 1 make the model robust by reducing the variance.
-	Typical values ~0.8 generally work fine but can be fine-tuned further.
-	Misc Parameters
-	loss
-	It refers to the loss function to be minimized in each split.
-	Limitations of Boosting
+The number of features to consider while searching for a best split.
+These will be randomly selected.
+As a thumb-rule, square root of the total number of features works great but we should check upto 30-40% of the total number of features.
+Higher values may lead to over-fitting
+Training parameters
+learning_rate :
+Determines the impact of each tree on the final outcome. GBM works by starting with an initial estimate which is updated using the output of each tree.
+The learning parameter controls the magnitude of this change in the estimates.
+Lower values are generally preferred as they make the model robust to the specific characteristics of tree and thus allowing it to generalize well.
+Lower values would require higher number of trees to model all the relations and will be computationally expensive.
+n_estimators :
+The number of sequential trees to be modeled
+More robust at higher number of trees but it can still overfit at a point.
+Hence, this should be tuned using CV for a particular learning rate.
+subsample
+The fraction of observations to be selected for each tree. Selection is done by random.
+Values slightly less than 1 make the model robust by reducing the variance.
+Typical values ~0.8 generally work fine but can be fine-tuned further.
+Misc Parameters
+loss
+It refers to the loss function to be minimized in each split.
+Limitations of Boosting
 
-	Just like any other ensemble method, Boosting also does suffer limitations
+Just like any other ensemble method, Boosting also does suffer limitations
 
-	Computationly expensive:
-	With so much of iteration of weak models happening in the implementation, this algorithm is expensive both resource and time wise.
+Computationly expensive:
+With so much of iteration of weak models happening in the implementation, this algorithm is expensive both resource and time wise.
 
-	This is also because Boosting can easily lead to overfitting of the data and therefore a good fit requires careful tuning of the learning rate and other parameters. Therefore the training process can require a lot of computation.
+This is also because Boosting can easily lead to overfitting of the data and therefore a good fit requires careful tuning of the learning rate and other parameters. Therefore the training process can require a lot of computation.
 
-	Slow learning
-	With each iteration the complexity of the classification increases. Large datasets or iterations on multiple datasets won't give good results economically. That also makes it hard to implement in real time platform.
+Slow learning
+With each iteration the complexity of the classification increases. Large datasets or iterations on multiple datasets won't give good results economically. That also makes it hard to implement in real time platform.
 
-	Also, when the featured space has thousands of features with sparse values,it is usually not a good choice for accuracy and computational cost reasons.
+Also, when the featured space has thousands of features with sparse values,it is usually not a good choice for accuracy and computational cost reasons.
 
-	Lack of interpretability
-	Owing to the gradual increase in complexity of the classification, boosting model can be very difficult for people to interpret.
+Lack of interpretability
+Owing to the gradual increase in complexity of the classification, boosting model can be very difficult for people to interpret.
 
-	Q: Till now you might have understood Boosting is a powerful algorithm with limitations. But why is it popular though?
+Q: Till now you might have understood Boosting is a powerful algorithm with limitations. But why is it popular though?
 
 
 
-	XGBOOST:
-	MOre imporve version of GBM
-	speed is quite high and compurtatonally managebale
-	Handling sparse data: Missing values or data processing steps like one-hot encoding make data sparse. XGBoost incorporates a sparsity-aware split finding algorithm to handle different types of sparsity patterns in the data.
+XGBOOST:
+MOre imporve version of GBM
+speed is quite high and compurtatonally managebale
+Handling sparse data: Missing values or data processing steps like one-hot encoding make data sparse. XGBoost incorporates a sparsity-aware split finding algorithm to handle different types of sparsity patterns in the data.
 
 
 
-	^^^^^^^^^^^^^
-	from sklearn.model_selection import train_test_split
-	from sklearn.datasets import make_moons
-	from sklearn.ensemble import AdaBoostClassifier
-	from sklearn.tree import DecisionTreeClassifier
-	from xgboost import XGBClassifier  #Not a sklearn implementation
+^^^^^^^^^^^^^
+from sklearn.model_selection import train_test_split
+from sklearn.datasets import make_moons
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.tree import DecisionTreeClassifier
+from xgboost import XGBClassifier  #Not a sklearn implementation
 
 
-	#Loading of data
-	data=pd.read_csv('../data/bank_data.csv')
+#Loading of data
+data=pd.read_csv('../data/bank_data.csv')
 
-	#Sampling of data
-	sub_data=data.sample(frac=0.3, random_state=28)
+#Sampling of data
+sub_data=data.sample(frac=0.3, random_state=28)
 
-	#Extracting features
-	X=sub_data.drop(['deposit'],1)
+#Extracting features
+X=sub_data.drop(['deposit'],1)
 
-	#Extracting target class
-	y=sub_data['deposit'].copy()
+#Extracting target class
+y=sub_data['deposit'].copy()
 
-	#Splitting features and target class
-	X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+#Splitting features and target class
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 
 
-	#Fitting of Weak Classifier
+#Fitting of Weak Classifier
 
-	dt_clf=DecisionTreeClassifier(max_depth=1,random_state=0)
-	dt_clf.fit(X_train,y_train)
-	dt_score=dt_clf.score(X_test,y_test)
-	print("Score of Weak classifier:",dt_score)
+dt_clf=DecisionTreeClassifier(max_depth=1,random_state=0)
+dt_clf.fit(X_train,y_train)
+dt_score=dt_clf.score(X_test,y_test)
+print("Score of Weak classifier:",dt_score)
 
 
-	# Fitting of weak classifier with Adaboost
-	ada_clf = AdaBoostClassifier(base_estimator=dt_clf,random_state=0)
-	ada_clf.fit(X_train, y_train)
-	ada_score=ada_clf.score(X_test,y_test)
-	print("\nScore of AdaBoost:",ada_score)
+# Fitting of weak classifier with Adaboost
+ada_clf = AdaBoostClassifier(base_estimator=dt_clf,random_state=0)
+ada_clf.fit(X_train, y_train)
+ada_score=ada_clf.score(X_test,y_test)
+print("\nScore of AdaBoost:",ada_score)
 
 
-	# Fitting of weak classifier with XGBoost
-	xgb_clf = XGBClassifier(base_estimator=dt_clf,random_state=0)
-	xgb_clf.fit(X_train, y_train)
-	xgb_score= xgb_clf.score(X_test,y_test)
-	print("\nScore of XGBoost:",xgb_score)
-	Output:
+# Fitting of weak classifier with XGBoost
+xgb_clf = XGBClassifier(base_estimator=dt_clf,random_state=0)
+xgb_clf.fit(X_train, y_train)
+xgb_score= xgb_clf.score(X_test,y_test)
+print("\nScore of XGBoost:",xgb_score)
+Output:
 
-	Score of Weak classifier: 0.70
+Score of Weak classifier: 0.70
 
-	Score of AdaBoost: 0.79
+Score of AdaBoost: 0.79
 
-	Score of XGBoost: 0.81
+Score of XGBoost: 0.81
 
-	^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
-	A: There has been a recent implementation of GBM which has suddenly made it one the most popular ML algorithm out there - XGBoost
+A: There has been a recent implementation of GBM which has suddenly made it one the most popular ML algorithm out there - XGBoost
 
 
 
 
-	**************************************
-	Challenges in Machine Learning
-	**************************************
+**************************************
+Challenges in Machine Learning
+**************************************
 
-	40,031
-	9
-	PS
-	Challenges in Machine Learning
-	Black Art of Machine Learning
-	Intuition fails in higher dimensions(4/6)
-	From the previous topic you know that as the number of features (dimensions) increases, there needs to be an exponential increase in the number of training examples in order to curb the problem of sparsity which can lead to overfitting if not dealt with properly.
+40,031
+9
+PS
+Challenges in Machine Learning
+Black Art of Machine Learning
+Intuition fails in higher dimensions(4/6)
+From the previous topic you know that as the number of features (dimensions) increases, there needs to be an exponential increase in the number of training examples in order to curb the problem of sparsity which can lead to overfitting if not dealt with properly.
 
-	However, there is another problem with high dimensional data; data is not distributed uniformly across all dimensions. In fact, data around the origin (at the center of the hypercube) is much more sparse than data in the corners of the search space. This can be understood as follows:
+However, there is another problem with high dimensional data; data is not distributed uniformly across all dimensions. In fact, data around the origin (at the center of the hypercube) is much more sparse than data in the corners of the search space. This can be understood as follows:
 
-	Imagine a unit square that represents the 2D feature space. The average of the feature space is the center of this unit square, and all points within unit distance from this center, are inside a unit circle that inscribes the unit square. The training samples that do not fall within this unit circle are closer to the corners of the search space than to its center. These samples are difficult to classify because their feature values greatly differs (e.g. samples in opposite corners of the unit square). Therefore, classification is easier if most samples fall inside the inscribed unit circle, illustrated by figure below:
+Imagine a unit square that represents the 2D feature space. The average of the feature space is the center of this unit square, and all points within unit distance from this center, are inside a unit circle that inscribes the unit square. The training samples that do not fall within this unit circle are closer to the corners of the search space than to its center. These samples are difficult to classify because their feature values greatly differs (e.g. samples in opposite corners of the unit square). Therefore, classification is easier if most samples fall inside the inscribed unit circle, illustrated by figure below:
 
-	circle
+circle
 
-	An interesting question is now how the volume of the circle (hypersphere) changes relative to the volume of the square (hypercube) when we increase the dimensionality of the feature space. The volume of a unit hypercube of dimension d is always 1^d = 11 
-	d
-	 =1. The volume of the inscribing hypersphere of dimension d and with radius 0.5 can be calculated as:
+An interesting question is now how the volume of the circle (hypersphere) changes relative to the volume of the square (hypercube) when we increase the dimensionality of the feature space. The volume of a unit hypercube of dimension d is always 1^d = 11 
+d
+ =1. The volume of the inscribing hypersphere of dimension d and with radius 0.5 can be calculated as:
 
-	eq
+eq
 
-	gp
+gp
 
-	As seen from the above equation and the graph, the volume of the hypersphere tends to zero as the dimensionality tends to infinity, whereas the volume of the surrounding hypercube remains constant. This surprising and rather counter-intuitive observation partially explains the problems associated with the curse of dimensionality in classification: In high dimensional spaces, most of the training data resides in the corners of the hypercube defining the feature space. And as mentioned before, instances in the corners of the feature space are much more difficult to classify than instances around the centroid of the hypersphere.
+As seen from the above equation and the graph, the volume of the hypersphere tends to zero as the dimensionality tends to infinity, whereas the volume of the surrounding hypercube remains constant. This surprising and rather counter-intuitive observation partially explains the problems associated with the curse of dimensionality in classification: In high dimensional spaces, most of the training data resides in the corners of the hypercube defining the feature space. And as mentioned before, instances in the corners of the feature space are much more difficult to classify than instances around the centroid of the hypersphere.
 
-	wow
+wow
 
-	The above image shows a 2D unit square, a 3D unit cube, and a creative visualization of an 8D hypercube which has 2^8 = 256 corners. For this 8-dimensional hypercube, about 98% of the data is concentrated in its 256 corners (found from the equation above). As a result, when the dimensionality of the feature space goes to infinity, the ratio of the difference in minimum and maximum Euclidean distance from sample point to the centroid, and the minimum distance itself, tends to zero:
+The above image shows a 2D unit square, a 3D unit cube, and a creative visualization of an 8D hypercube which has 2^8 = 256 corners. For this 8-dimensional hypercube, about 98% of the data is concentrated in its 256 corners (found from the equation above). As a result, when the dimensionality of the feature space goes to infinity, the ratio of the difference in minimum and maximum Euclidean distance from sample point to the centroid, and the minimum distance itself, tends to zero:
 
-	eq_2
+eq_2
 
-	Therefore, distance measures start losing their effectiveness to measure dissimilarity in highly dimensional spaces. Since classifiers depend on these distance measures (e.g. Euclidean distance, Mahalanobis distance, Manhattan distance), classification is often easier in lower-dimensional spaces where less features are used to describe the object of interest.
+Therefore, distance measures start losing their effectiveness to measure dissimilarity in highly dimensional spaces. Since classifiers depend on these distance measures (e.g. Euclidean distance, Mahalanobis distance, Manhattan distance), classification is often easier in lower-dimensional spaces where less features are used to describe the object of interest.
 
-	How to avoid curse of dimensionality?
+How to avoid curse of dimensionality?
 
-	As already seen above, the performance of a classifier decreases when the dimensionality of the problem becomes too large. The question then is what too large’ means, and how overfitting can be avoided. Regrettably there is no fixed rule that defines how many feature should be used in a classification problem. In fact, this depends on the amount of training data available, the complexity of the decision boundaries, and the type of classifier used.
+As already seen above, the performance of a classifier decreases when the dimensionality of the problem becomes too large. The question then is what too large’ means, and how overfitting can be avoided. Regrettably there is no fixed rule that defines how many feature should be used in a classification problem. In fact, this depends on the amount of training data available, the complexity of the decision boundaries, and the type of classifier used.
 
-	Some rules of thumb that you can follow are as follows:
+Some rules of thumb that you can follow are as follows:
 
-	Training instances should be increased with addition of new features: The smaller the size of the training data, the less features should be used. If N training samples suffice to cover a 1D feature space of unit interval size, then N^2N 
-	2
-	  samples are needed to cover a 2D feature space with the same density, and N^3N 
-	3
-	  samples are needed in a 3D feature space. In other words, the number of training instances needed grows exponentially with the number of dimensions used.
+Training instances should be increased with addition of new features: The smaller the size of the training data, the less features should be used. If N training samples suffice to cover a 1D feature space of unit interval size, then N^2N 
+2
+  samples are needed to cover a 2D feature space with the same density, and N^3N 
+3
+  samples are needed in a 3D feature space. In other words, the number of training instances needed grows exponentially with the number of dimensions used.
 
-	Dimensionality should be kept low for algorithms with high variance: Classifiers that tend to model non-linear decision boundaries very accurately (e.g. neural networks, KNN classifiers, decision trees) do not generalize well and are prone to overfitting. Therefore, the dimensionality should be kept relatively low when these classifiers are used.
+Dimensionality should be kept low for algorithms with high variance: Classifiers that tend to model non-linear decision boundaries very accurately (e.g. neural networks, KNN classifiers, decision trees) do not generalize well and are prone to overfitting. Therefore, the dimensionality should be kept relatively low when these classifiers are used.
 
-	Dimensionality can be kept higher for algorithms with high bias: For classifiers that generalize easily (e.g. naive Bayesian, linear classifier), the number of used features can be higher since the classifier itself is less expressive.
+Dimensionality can be kept higher for algorithms with high bias: For classifiers that generalize easily (e.g. naive Bayesian, linear classifier), the number of used features can be higher since the classifier itself is less expressive.
 
-	Using feature selection techniques: Use feature selection techniques like correlation, chi-square etc. to reduce the number of dimensions. Essentially what it achieves is select M features from a set of N features.
+Using feature selection techniques: Use feature selection techniques like correlation, chi-square etc. to reduce the number of dimensions. Essentially what it achieves is select M features from a set of N features.
 
-	Replace features by combination of features: You can also try replacing set of N features by a set of M features, each of which is a combination of the original feature values. A very well known dimensionality reduction technique that yields uncorrelated, linear combinations of the original N features is Principal Component Analysis (PCA).
+Replace features by combination of features: You can also try replacing set of N features by a set of M features, each of which is a combination of the original feature values. A very well known dimensionality reduction technique that yields uncorrelated, linear combinations of the original N features is Principal Component Analysis (PCA).
 
-	Cross-validation techniques: If the classification results on the subsets used for training greatly differ from the results on the subset used for testing, overfitting is in play. Several types of cross-validation such as k-fold cross-validation and leave-one-out cross-validation can be used if only a limited amount of training data is available.
+Cross-validation techniques: If the classification results on the subsets used for training greatly differ from the results on the subset used for testing, overfitting is in play. Several types of cross-validation such as k-fold cross-validation and leave-one-out cross-validation can be used if only a limited amount of training data is available.
 
-	*************
+*************
 
-	More interpretability
+More interpretability
 
-	***
+***
 
 

@@ -1,0 +1,77 @@
+>>Tokenization is the process of splitting the text into smaller parts called tokens. 
+
+--First Step of NLP, to convert all words to numeric values.
+   --- To achieve this, We need to break text down to words.
+   
+*******Sample_Code********
+first_complaint=data['X'].iloc[0]
+bag_of_words_1=first_complaint.split()
+bag_of_words_2=word_tokenize(first_complaint)
+**********************************
+https://github.com/rpsadarangani/ga-learner-dsmp-repo/
+https://github.com/shreyasi1212/ga-learner-dsmp-repo
+https://towardsdatascience.com/find-your-best-customers-with-customer-segmentation-in-python-61d602f9eee6
+>>sentence tokenization:
+***
+list_of_sentences = sent_tokenize(first_complaint)
+**
+wordcloud=WordCloud(width=800, height=500, random_state=21, max_font_size=110).generate(all_words)
+plt.imshow(wordcloud, interpolation='bilinear')
+--You must conver all records to lower case before uses those into NLP
+
+>> Stemming and Lemmatization
+Stemming
+
+Stemming is the process of converting the words of a sentence to its non-changing portions. So stemming a word or sentence may result in words that are not actual words. Stems are created by removing the suffixes or prefixes used with a word.
+
+Lemmatization:
+
+This method is a more refined way of breaking words through the use of a vocabulary and morphological analysis of words. The aim is to always return the base form of a word known as lemma
+
+**********Code***************
+from nltk.stem import WordNetLemmatizer
+
+−0.68567 0.14807 0.71269
+​0.12975 0.93855 −0.31982  
+−0.71626 0.31176 0.62433
+​	
+  
+
+text = "Women in  technology are amazing at coding"
+print("The words of text:",text,"\nis lemmatized in the following way: ")
+
+tokens=text.lower().split()
+lemma = WordNetLemmatizer()
+lemma_result = [lemma.lemmatize(i) for i in tokens]
+print(lemma_result)
+********************************
+
+>>What is Topic modelling?<<
+
+At an abstract level, beyond the words, sentences and paragraphs lies the topic the document or the set of documents are talking about. The process of learning, recognizing, and extracting these topics across a collection of documents is called Topic modelling
+
+5/6*6*6*6
+1/54*6
+324
+diff between Text classification and Topic Modelling::
+ Text classification is supervised learning and we know beforehand the classes or categories that the document can fall into. Topic Modelling is a form of unsupervised learning where the topics are learnt from the data itself and not specified beforehand. 
+ 
+ def label_race(row):
+    if row['food'] == "T":
+       return 'food'
+    elif row['recharge'] == "T":
+       return 'recharge'
+    elif row['support'] == "T":
+       return 'support'
+    elif row['reminders'] == "T":
+       return 'reminders'
+    elif row['travel'] == "T":
+       return 'travel' 
+    elif row['nearby'] == "T":
+       return 'nearby'
+    elif row['movies'] == "T":
+       return 'movies'
+    elif row['casual'] == "T":
+       return 'casual'
+    elif row['other'] == "T":
+       return 'other'  

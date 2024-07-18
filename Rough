@@ -1,0 +1,26 @@
+sums=np.array(len(words))
+top_20=sorted(words.items(), key=operator.itemgetter(1), reverse = True)[:20]
+print(top_20)
+
+
+coherence_model_lda=CoherenceModel(model=ldamodel, texts=clean_headlines, dictionary=dictionary, coherence='c_v')
+coherence_lda=coherence_model_lda.get_coherence()
+
+Grey atom great source learn data science
+
+https://github.com/rpsadarangani/ga-learner-dsmp-repo/blob/master/Customer-Segmentation--Unsupervised-Learning/code.py
+
+
+X_train_temp[['city']]=pd.get_dummies(X_train[['city']])
+X_train_temp[['county']]=pd.get_dummies(X_train[['county']])
+X_train_temp[['state']]=pd.get_dummies(X_train[['state']])
+
+X_val_temp[['city']]=pd.get_dummies(X_train[['city']])
+X_val_temp[['county']]=pd.get_dummies(X_train[['county']])
+X_val_temp[['state']]=pd.get_dummies(X_train[['state']])
+
+
+Feel Proud and Accomplished to attain DATA SCIENCE MASTER badge.
+
+Thank you @Barclays @ and @GreyAtom for providing tools to upgrade competency in systematic mann	
+Cherry on cake, I manage to be in Toppers list. Boosting extra confidence .
