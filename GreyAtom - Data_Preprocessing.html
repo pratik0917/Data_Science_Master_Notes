@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<!-- saved from url=(0168)https://ga.greyatom.com/fs/learn/programs/58987145-280c-436c-891d-8ef4ada2a772/concepts/60181e88-aec3-4784-9108-5848d60c11b7/topics/ccb5c63a-6a68-4301-bc63-d3204cce64a1 -->
+<html lang="en" style="box-sizing:border-box"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><script type="text/javascript" async="" src="./GreyAtom - Data_Preprocessing_files/a.js.download"></script><script async="" src="./GreyAtom - Data_Preprocessing_files/analytics.js.download"></script><script>!function(t,h,e,j,s,n){t.hj=t.hj||function(){(t.hj.q=t.hj.q||[]).push(arguments)},t._hjSettings={hjid:1303806,hjsv:6},s=h.getElementsByTagName("head")[0],(n=h.createElement("script")).async=1,n.src="https://static.hotjar.com/c/hotjar-"+t._hjSettings.hjid+".js?sv="+t._hjSettings.hjsv,s.appendChild(n)}(window,document)</script><script async="" src="./GreyAtom - Data_Preprocessing_files/hotjar-1303806.js.download"></script><link rel="manifest" href="https://ga.greyatom.com/manifest.json"><link rel="shortcut icon" href="https://ga.greyatom.com/favicon.ico?v=1"><style>.wrapper{display:flex;height:100vh;flex-direction:column;justify-content:center}.wrapper-content{align-self:center}.mascot-logo{float:left;width:85px}.loader-content{float:left;width:300px;font-family:Roboto,Helvetica,Arial,sans-serif;font-size:14px;color:#444;margin-top:5px;margin-left:20px;background:#fff;border:1px solid #ddd;padding:15px 20px;border-radius:4px;position:relative;line-height:24px;box-sizing:border-box}.loader-content:before{content:"";width:0;height:0;position:absolute;border-left:10px solid transparent;border-right:10px solid #ddd;border-top:10px solid transparent;border-bottom:10px solid transparent;left:-21px;top:39%}.loader-content:after{content:"";width:0;height:0;position:absolute;border-left:10px solid transparent;border-right:10px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;left:-20px;top:39%}.h-percent-100{height:100%}.flex-full{flex:1 1}.container{height:35px;border-radius:50%;position:relative;padding:6px}.outer-circle{height:45px;position:absolute;width:45px;padding:0;border:3px solid #1d16f4;border-radius:50%;animation:rotate 1.5s infinite linear;left:0;top:-10px;box-sizing:content-box}.outer-circle:before{background:#fafafa;content:"";width:9px;height:12px;left:37px;top:2px;position:absolute;z-index:1;border-right-color:#fafafa;transform:rotate(-40deg)}.middle-circle{height:29px;width:29px;padding:0;border:3px solid #1d16f4;border-radius:50%;animation:rotate 1.5s infinite linear;position:absolute;left:8px;top:-2px;box-sizing:content-box}.middle-circle:before{background:#fafafa;content:"";width:6px;height:8px;left:12px;top:26px;position:absolute;z-index:1;border-right:5px;border-right-color:#fafafa;transform:rotate(90deg)}.inner-circle{height:12px;width:12px;padding:0;border:3px solid #1d16f4;border-radius:50%;animation:rotate 1.5s infinite linear;position:absolute;left:17px;top:6px;box-sizing:content-box}.inner-circle:before{background:#fafafa;content:"";width:4px;height:4px;left:-2px;top:0;position:absolute;z-index:1;border-right:5px;border-right-color:#fafafa;transform:rotate(126deg)}.loading-contents{color:#444;text-align:center}.AppFactoryLoader{box-sizing:content-box}@keyframes rotate{100%{-webkit-transform:rotate(360deg)}}</style><script type="text/javascript">!function(e,a,t,n,c,g,o){e.GoogleAnalyticsObject=c,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,g=a.createElement(t),o=a.getElementsByTagName(t)[0],g.async=1,g.src="https://www.google-analytics.com/analytics.js",o.parentNode.insertBefore(g,o)}(window,document,"script",0,"ga"),ga("create","UA-91837744-1","auto")</script><script type="text/javascript">var clevertap={event:[],profile:[],account:[],onUserLogin:[],notifications:[],privacy:[]};clevertap.account.push({id:"WWR-97Z-R45Z"}),clevertap.privacy.push({optOut:!1}),clevertap.privacy.push({useIP:!1}),function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https://d2r1yp2w7bby2u.cloudfront.net":"http://static.clevertap.com")+"/js/a.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}()</script><script type="text/javascript" src="./GreyAtom - Data_Preprocessing_files/loader.js.download"></script><script type="text/javascript">require.config({paths:{vs:"https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.16.2/min/vs"}});var uriData="     self.MonacoEnvironment = { baseUrl: 'https://cdnjs.cloudflare.com/ajax/libsmonaco-editor/0.16.2/min/vs'};     importScripts('https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.16.2/min/vs/base/worker/workerMain.js');   ";function initMonacoEditor(t,n,a){require(["vs/editor/editor.main"],function(){var o=monaco.editor.create(t,n);o.updateOptions({autoIndent:!0,formatOnPaste:!0,formatOnType:!0}),a(o)})}window.MonacoEnvironment={getWorkerUrl:function(o,t){return"data:text/javascript;charset=utf-8,"+encodeURIComponent(uriData)}}</script><title>GreyAtom - Learning Platform</title><link href="./GreyAtom - Data_Preprocessing_files/15.a87b714c.chunk.css" rel="stylesheet"><link href="./GreyAtom - Data_Preprocessing_files/main.38120ee5.chunk.css" rel="stylesheet"><script async="" src="./GreyAtom - Data_Preprocessing_files/modules.8e0664c9a6601d947943.js.download" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script type="text/javascript" src="./GreyAtom - Data_Preprocessing_files/a" rel="nofollow" async=""></script><script type="text/javascript" src="./GreyAtom - Data_Preprocessing_files/a(1)" rel="nofollow" async=""></script><style data-emotion=""></style><style data-styled-components=""></style><style data-jss="" data-meta="MuiPaper">
+.jss40 {
+  background-color: #fff;
+}
+.jss41 {
+  border-radius: 4px;
+}
+.jss42 {
+  box-shadow: none;
+}
+.jss43 {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+.jss44 {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+.jss45 {
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+}
+.jss46 {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.jss47 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+}
+.jss48 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+.jss49 {
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+}
+.jss50 {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.jss51 {
+  box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+}
+.jss52 {
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+}
+.jss53 {
+  box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12);
+}
+.jss54 {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+}
+.jss55 {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12);
+}
+.jss56 {
+  box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12);
+}
+.jss57 {
+  box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12);
+}
+.jss58 {
+  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+}
+.jss59 {
+  box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12);
+}
+.jss60 {
+  box-shadow: 0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12);
+}
+.jss61 {
+  box-shadow: 0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12);
+}
+.jss62 {
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12);
+}
+.jss63 {
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12);
+}
+.jss64 {
+  box-shadow: 0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12);
+}
+.jss65 {
+  box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12);
+}
+.jss66 {
+  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+</style><style data-jss="" data-meta="MuiAppBar">
+.jss32 {
+  width: 100%;
+  display: flex;
+  z-index: 1100;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.jss33 {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: fixed;
+}
+.jss34 {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: absolute;
+}
+.jss35 {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: sticky;
+}
+.jss36 {
+  position: static;
+}
+.jss37 {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f5f5f5;
+}
+.jss38 {
+  color: #fff;
+  background-color: #1335e2;
+}
+.jss39 {
+  color: #fff;
+  background-color: #388e3c;
+}
+</style><style data-jss="" data-meta="MuiBadge">
+.jss226 {
+  display: inline-flex;
+  position: relative;
+  vertical-align: middle;
+}
+.jss227 {
+  top: -12px;
+  right: -12px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  align-items: center;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  align-content: center;
+  border-radius: 50%;
+  flex-direction: row;
+  justify-content: center;
+}
+.jss228 {
+  color: #fff;
+  background-color: #1335e2;
+}
+.jss229 {
+  color: #fff;
+  background-color: #388e3c;
+}
+.jss230 {
+  color: #fff;
+  background-color: #f44336;
+}
+</style><style data-jss="" data-meta="MuiTouchRipple">
+.jss194 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  position: absolute;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.jss195 {
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  position: absolute;
+}
+.jss196 {
+  opacity: 0.3;
+  transform: scale(1);
+  animation: mui-ripple-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.jss197 {
+  animation-duration: 200ms;
+}
+.jss198 {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: block;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.jss199 {
+  opacity: 0;
+  animation: mui-ripple-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.jss200 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: mui-ripple-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@-webkit-keyframes mui-ripple-enter {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes mui-ripple-exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes mui-ripple-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style><style data-jss="" data-meta="MuiButtonBase">
+.jss191 {
+  color: inherit;
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+  display: inline-flex;
+  outline: none;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  justify-content: center;
+  -moz-appearance: none;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.jss191::-moz-focus-inner {
+  border-style: none;
+}
+.jss191.jss192 {
+  cursor: default;
+  pointer-events: none;
+}
+</style><style data-jss="" data-meta="MuiButton">
+.jss167 {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 8px 16px;
+  font-size: 14px;
+  min-width: auto;
+  box-sizing: border-box;
+  min-height: 36px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.4em;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.jss167:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.jss167.jss185 {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .jss167:hover {
+    background-color: transparent;
+  }
+}
+.jss167:hover.jss185 {
+  background-color: transparent;
+}
+.jss168 {
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.jss170 {
+  color: #1335e2;
+}
+.jss170:hover {
+  background-color: rgba(19, 53, 226, 0.08);
+}
+@media (hover: none) {
+  .jss170:hover {
+    background-color: transparent;
+  }
+}
+.jss171 {
+  color: #388e3c;
+}
+.jss171:hover {
+  background-color: rgba(56, 142, 60, 0.08);
+}
+@media (hover: none) {
+  .jss171:hover {
+    background-color: transparent;
+  }
+}
+.jss175 {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+}
+.jss176 {
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  background-color: #e0e0e0;
+}
+.jss176.jss184 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+.jss176:active {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.jss176.jss185 {
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.jss176:hover {
+  background-color: #d5d5d5;
+}
+@media (hover: none) {
+  .jss176:hover {
+    background-color: #e0e0e0;
+  }
+}
+.jss176:hover.jss185 {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.jss177 {
+  color: #fff;
+  background-color: #1335e2;
+}
+.jss177:hover {
+  background-color: #1d2480;
+}
+@media (hover: none) {
+  .jss177:hover {
+    background-color: #1335e2;
+  }
+}
+.jss178 {
+  color: #fff;
+  background-color: #388e3c;
+}
+.jss178:hover {
+  background-color: #1b5e20;
+}
+@media (hover: none) {
+  .jss178:hover {
+    background-color: #388e3c;
+  }
+}
+.jss182 {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  min-width: 0;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+}
+.jss182:active {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+}
+.jss183 {
+  width: auto;
+  height: 48px;
+  padding: 0 16px;
+  min-width: 48px;
+  border-radius: 24px;
+}
+.jss186 {
+  color: inherit;
+}
+.jss187 {
+  width: 40px;
+  height: 40px;
+}
+.jss188 {
+  padding: 7px 8px;
+  min-width: auto;
+  font-size: 0.8125rem;
+  min-height: 32px;
+}
+.jss189 {
+  padding: 8px 24px;
+  min-width: 112px;
+  font-size: 0.9375rem;
+  min-height: 40px;
+}
+.jss190 {
+  width: 100%;
+}
+</style><style data-jss="" data-meta="MuiIconButton">
+.jss208 {
+  flex: 0 0 auto;
+  width: 40px;
+  color: rgba(0, 0, 0, 0.54);
+  height: 40px;
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;
+}
+.jss208:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.jss208.jss212 {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .jss208:hover {
+    background-color: transparent;
+  }
+}
+.jss208:hover.jss212 {
+  background-color: transparent;
+}
+.jss209 {
+  color: inherit;
+}
+.jss210 {
+  color: #1335e2;
+}
+.jss210:hover {
+  background-color: rgba(19, 53, 226, 0.08);
+}
+@media (hover: none) {
+  .jss210:hover {
+    background-color: transparent;
+  }
+}
+.jss211 {
+  color: #388e3c;
+}
+.jss211:hover {
+  background-color: rgba(56, 142, 60, 0.08);
+}
+@media (hover: none) {
+  .jss211:hover {
+    background-color: transparent;
+  }
+}
+.jss213 {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+</style><style data-jss="" data-meta="MuiCssBaseline">
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+</style><style data-jss="" data-meta="MuiModal">
+.jss245 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1300;
+  position: fixed;
+}
+.jss246 {
+  visibility: hidden;
+}
+</style><style data-jss="" data-meta="MuiDrawer">
+.jss234 {
+  flex: 0 0 auto;
+}
+.jss235 {
+  top: 0;
+  flex: 1 0 auto;
+  height: 100vh;
+  display: flex;
+  z-index: 1200;
+  outline: none;
+  position: fixed;
+  overflow-y: auto;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+}
+.jss236 {
+  left: 0;
+  right: auto;
+}
+.jss237 {
+  left: auto;
+  right: 0;
+}
+.jss238 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  height: auto;
+  max-height: 100vh;
+}
+.jss239 {
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  max-height: 100vh;
+}
+.jss240 {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+.jss241 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.jss242 {
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+.jss243 {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+</style><style data-jss="" data-meta="MuiGrid">
+.jss71 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.jss72 {
+  margin: 0;
+  box-sizing: border-box;
+}
+.jss73 {
+  min-width: 0;
+}
+.jss74 {
+  flex-direction: column;
+}
+.jss75 {
+  flex-direction: column-reverse;
+}
+.jss76 {
+  flex-direction: row-reverse;
+}
+.jss77 {
+  flex-wrap: nowrap;
+}
+.jss78 {
+  flex-wrap: wrap-reverse;
+}
+.jss79 {
+  align-items: center;
+}
+.jss80 {
+  align-items: flex-start;
+}
+.jss81 {
+  align-items: flex-end;
+}
+.jss82 {
+  align-items: baseline;
+}
+.jss83 {
+  align-content: center;
+}
+.jss84 {
+  align-content: flex-start;
+}
+.jss85 {
+  align-content: flex-end;
+}
+.jss86 {
+  align-content: space-between;
+}
+.jss87 {
+  align-content: space-around;
+}
+.jss88 {
+  justify-content: center;
+}
+.jss89 {
+  justify-content: flex-end;
+}
+.jss90 {
+  justify-content: space-between;
+}
+.jss91 {
+  justify-content: space-around;
+}
+.jss92 {
+  width: calc(100% + 8px);
+  margin: -4px;
+}
+.jss92 > .jss72 {
+  padding: 4px;
+}
+.jss93 {
+  width: calc(100% + 16px);
+  margin: -8px;
+}
+.jss93 > .jss72 {
+  padding: 8px;
+}
+.jss94 {
+  width: calc(100% + 24px);
+  margin: -12px;
+}
+.jss94 > .jss72 {
+  padding: 12px;
+}
+.jss95 {
+  width: calc(100% + 32px);
+  margin: -16px;
+}
+.jss95 > .jss72 {
+  padding: 16px;
+}
+.jss96 {
+  width: calc(100% + 40px);
+  margin: -20px;
+}
+.jss96 > .jss72 {
+  padding: 20px;
+}
+.jss97 {
+  flex-grow: 0;
+  max-width: none;
+  flex-basis: auto;
+}
+.jss98 {
+  flex-grow: 1;
+  max-width: 100%;
+  flex-basis: 0;
+}
+.jss99 {
+  flex-grow: 0;
+  max-width: 8.33333%;
+  flex-basis: 8.33333%;
+}
+.jss100 {
+  flex-grow: 0;
+  max-width: 16.66667%;
+  flex-basis: 16.66667%;
+}
+.jss101 {
+  flex-grow: 0;
+  max-width: 25%;
+  flex-basis: 25%;
+}
+.jss102 {
+  flex-grow: 0;
+  max-width: 33.33333%;
+  flex-basis: 33.33333%;
+}
+.jss103 {
+  flex-grow: 0;
+  max-width: 41.66667%;
+  flex-basis: 41.66667%;
+}
+.jss104 {
+  flex-grow: 0;
+  max-width: 50%;
+  flex-basis: 50%;
+}
+.jss105 {
+  flex-grow: 0;
+  max-width: 58.33333%;
+  flex-basis: 58.33333%;
+}
+.jss106 {
+  flex-grow: 0;
+  max-width: 66.66667%;
+  flex-basis: 66.66667%;
+}
+.jss107 {
+  flex-grow: 0;
+  max-width: 75%;
+  flex-basis: 75%;
+}
+.jss108 {
+  flex-grow: 0;
+  max-width: 83.33333%;
+  flex-basis: 83.33333%;
+}
+.jss109 {
+  flex-grow: 0;
+  max-width: 91.66667%;
+  flex-basis: 91.66667%;
+}
+.jss110 {
+  flex-grow: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+@media (min-width:600px) {
+  .jss111 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .jss112 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .jss113 {
+    flex-grow: 0;
+    max-width: 8.33333%;
+    flex-basis: 8.33333%;
+  }
+  .jss114 {
+    flex-grow: 0;
+    max-width: 16.66667%;
+    flex-basis: 16.66667%;
+  }
+  .jss115 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .jss116 {
+    flex-grow: 0;
+    max-width: 33.33333%;
+    flex-basis: 33.33333%;
+  }
+  .jss117 {
+    flex-grow: 0;
+    max-width: 41.66667%;
+    flex-basis: 41.66667%;
+  }
+  .jss118 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .jss119 {
+    flex-grow: 0;
+    max-width: 58.33333%;
+    flex-basis: 58.33333%;
+  }
+  .jss120 {
+    flex-grow: 0;
+    max-width: 66.66667%;
+    flex-basis: 66.66667%;
+  }
+  .jss121 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .jss122 {
+    flex-grow: 0;
+    max-width: 83.33333%;
+    flex-basis: 83.33333%;
+  }
+  .jss123 {
+    flex-grow: 0;
+    max-width: 91.66667%;
+    flex-basis: 91.66667%;
+  }
+  .jss124 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:960px) {
+  .jss125 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .jss126 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .jss127 {
+    flex-grow: 0;
+    max-width: 8.33333%;
+    flex-basis: 8.33333%;
+  }
+  .jss128 {
+    flex-grow: 0;
+    max-width: 16.66667%;
+    flex-basis: 16.66667%;
+  }
+  .jss129 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .jss130 {
+    flex-grow: 0;
+    max-width: 33.33333%;
+    flex-basis: 33.33333%;
+  }
+  .jss131 {
+    flex-grow: 0;
+    max-width: 41.66667%;
+    flex-basis: 41.66667%;
+  }
+  .jss132 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .jss133 {
+    flex-grow: 0;
+    max-width: 58.33333%;
+    flex-basis: 58.33333%;
+  }
+  .jss134 {
+    flex-grow: 0;
+    max-width: 66.66667%;
+    flex-basis: 66.66667%;
+  }
+  .jss135 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .jss136 {
+    flex-grow: 0;
+    max-width: 83.33333%;
+    flex-basis: 83.33333%;
+  }
+  .jss137 {
+    flex-grow: 0;
+    max-width: 91.66667%;
+    flex-basis: 91.66667%;
+  }
+  .jss138 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1280px) {
+  .jss139 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .jss140 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .jss141 {
+    flex-grow: 0;
+    max-width: 8.33333%;
+    flex-basis: 8.33333%;
+  }
+  .jss142 {
+    flex-grow: 0;
+    max-width: 16.66667%;
+    flex-basis: 16.66667%;
+  }
+  .jss143 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .jss144 {
+    flex-grow: 0;
+    max-width: 33.33333%;
+    flex-basis: 33.33333%;
+  }
+  .jss145 {
+    flex-grow: 0;
+    max-width: 41.66667%;
+    flex-basis: 41.66667%;
+  }
+  .jss146 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .jss147 {
+    flex-grow: 0;
+    max-width: 58.33333%;
+    flex-basis: 58.33333%;
+  }
+  .jss148 {
+    flex-grow: 0;
+    max-width: 66.66667%;
+    flex-basis: 66.66667%;
+  }
+  .jss149 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .jss150 {
+    flex-grow: 0;
+    max-width: 83.33333%;
+    flex-basis: 83.33333%;
+  }
+  .jss151 {
+    flex-grow: 0;
+    max-width: 91.66667%;
+    flex-basis: 91.66667%;
+  }
+  .jss152 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1920px) {
+  .jss153 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .jss154 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .jss155 {
+    flex-grow: 0;
+    max-width: 8.33333%;
+    flex-basis: 8.33333%;
+  }
+  .jss156 {
+    flex-grow: 0;
+    max-width: 16.66667%;
+    flex-basis: 16.66667%;
+  }
+  .jss157 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .jss158 {
+    flex-grow: 0;
+    max-width: 33.33333%;
+    flex-basis: 33.33333%;
+  }
+  .jss159 {
+    flex-grow: 0;
+    max-width: 41.66667%;
+    flex-basis: 41.66667%;
+  }
+  .jss160 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .jss161 {
+    flex-grow: 0;
+    max-width: 58.33333%;
+    flex-basis: 58.33333%;
+  }
+  .jss162 {
+    flex-grow: 0;
+    max-width: 66.66667%;
+    flex-basis: 66.66667%;
+  }
+  .jss163 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .jss164 {
+    flex-grow: 0;
+    max-width: 83.33333%;
+    flex-basis: 83.33333%;
+  }
+  .jss165 {
+    flex-grow: 0;
+    max-width: 91.66667%;
+    flex-basis: 91.66667%;
+  }
+  .jss166 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+</style><style data-jss="" data-meta="MuiIcon">
+.jss214 {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  font-size: 16px;
+  user-select: none;
+  flex-shrink: 0;
+}
+.jss215 {
+  color: #1335e2;
+}
+.jss216 {
+  color: #388e3c;
+}
+.jss217 {
+  color: rgba(0, 0, 0, 0.54);
+}
+.jss218 {
+  color: #f44336;
+}
+.jss219 {
+  color: rgba(0, 0, 0, 0.26);
+}
+.jss220 {
+  font-size: inherit;
+}
+</style><style data-jss="" data-meta="MuiToolbar">
+.jss67 {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .jss67 {
+    min-height: 56px;
+  }
+}
+.jss68 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width:600px) {
+  .jss68 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.jss69 {
+  min-height: 56px;
+}
+@media (min-width:0px) and (orientation: landscape) {
+  .jss69 {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .jss69 {
+    min-height: 64px;
+  }
+}
+@media (min-width: 600px) {
+  .jss69 {
+    min-height: 56px;
+  }
+}
+.jss70 {
+  min-height: 48px;
+}
+</style><style data-jss="" data-meta="MuiTooltip">
+.jss201 {
+  z-index: 1500;
+  opacity: 0.9;
+}
+.jss202 {
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.625rem;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1.4em;
+  border-radius: 4px;
+  background-color: #616161;
+}
+.jss203 {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  line-height: 1.14286em;
+}
+.jss204 {
+  margin: 0 24px ;
+  transform-origin: right center;
+}
+@media (min-width:600px) {
+  .jss204 {
+    margin: 0 14px;
+  }
+}
+.jss205 {
+  margin: 0 24px;
+  transform-origin: left center;
+}
+@media (min-width:600px) {
+  .jss205 {
+    margin: 0 14px;
+  }
+}
+.jss206 {
+  margin: 24px 0;
+  transform-origin: center bottom;
+}
+@media (min-width:600px) {
+  .jss206 {
+    margin: 14px 0;
+  }
+}
+.jss207 {
+  margin: 24px 0;
+  transform-origin: center top;
+}
+@media (min-width:600px) {
+  .jss207 {
+    margin: 14px 0;
+  }
+}
+</style><style data-jss="">
+.jss232 {
+  width: 100%;
+  height: 100%;
+}
+.jss233 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+</style><style data-jss="">
+.jss10 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 56px);
+  z-index: 1099;
+  position: fixed;
+  background: #fafafa;
+  margin-top: 56px;
+}
+</style><style data-jss="">
+.jss31 {
+  padding-left: 80px;
+}
+</style><style data-jss="">
+.jss231 {
+  color: #6a2c81;
+}
+</style><style data-jss="">
+.jss221 {
+  top: -2px !important;
+  left: -54px !important;
+  width: 350px;
+  z-index: 1100;
+}
+.jss222 {
+  top: 2px !important;
+  left: 19px !important;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+}
+.jss223 {
+  margin: 0 !important;
+  font-size: 16px;
+}
+.jss224 {
+  line-height: 1.4 !important;
+}
+.jss225 {
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+</style><style data-jss="">
+.jss27 {
+  height: 100vh;
+  position: relative;
+  padding-top: 56px;
+}
+.jss28 {
+  z-index: 1099;
+  background: #fafafa;
+}
+.jss29 {
+  padding-top: 56px;
+}
+.jss30 {
+  padding-top: 91px;
+}
+</style><style data-jss="">
+
+</style><style data-jss="">
+.jss20 {
+  padding-top: 56px;
+}
+.jss21 {
+  top: 0;
+  left: 0;
+  width: 50px;
+  border: 0;
+  bottom: 0;
+  position: absolute;
+  font-size: 22px;
+  text-align: center;
+  background: #ececec;
+  line-height: 53px;
+  padding-top: 5px;
+  border-right: 1px solid #ddd;
+  border-radius: 0;
+}
+.jss21:hover {
+  background-color: rgb(228,228,228);
+}
+.jss22 {
+  margin-left: 50px;
+}
+.jss23 {
+  border-color: rgba(221, 221, 221, .3);
+}
+.jss24:hover {
+  background-color: rgba(41, 55, 65);
+}
+.jss24:hover div.text-opaque {
+  color: #5bc0de !important;
+}
+.jss25 {
+  color: #cccccc;
+  padding: 2px 5px;
+  font-size: 10px;
+  min-height: auto;
+  border-color: #cccccc;
+}
+.jss25:hover {
+  background-color: #2c3c49;
+}
+.jss26 {
+  padding: 8px 16px 8px 13px;
+  border-left: 3px solid #5bc0de;
+}
+</style><style data-jss="">
+
+</style><style data-jss="">
+
+</style><style data-jss="">
+
+</style><style data-jss="">
+
+</style><style data-jss="">
+
+</style><style data-jss="">
+
+</style><script charset="utf-8" src="./GreyAtom - Data_Preprocessing_files/1.c166370b.chunk.js.download"></script><script charset="utf-8" src="./GreyAtom - Data_Preprocessing_files/2.0a044ab3.chunk.js.download"></script><script charset="utf-8" src="./GreyAtom - Data_Preprocessing_files/8.65c1c8ca.chunk.js.download"></script><script charset="utf-8" src="./GreyAtom - Data_Preprocessing_files/0.6d1cd8ab.chunk.js.download"></script><script charset="utf-8" src="./GreyAtom - Data_Preprocessing_files/learnAndTeach.4a3216ad.chunk.js.download"></script><script type="text/javascript" src="./GreyAtom - Data_Preprocessing_files/a(2)" rel="nofollow" async=""></script></head><body style="margin:0;font-family:Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.4;font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;color:#444;background-color:#fafafa;box-sizing:border-box"><noscript>You need to enable JavaScript to run this app.</noscript><div id="html-head-loader" style="box-sizing: border-box; width: 100%; position: absolute; top: 0px; height: 56px; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px 0px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 3px 3px -2px; display: none;"><div style="display:flex;flex-direction:row;padding:10px"><div style="margin-left:8px;flex:1"><svg width="217px" height="32px" viewBox="0 0 217 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="CL/Nav-Header/Loader" transform="translate(-22.000000, -12.000000)" fill="#ECECEC" fill-rule="nonzero"><g id="Nav-Header"><g id="Group" transform="translate(22.000000, 12.000000)"><rect id="Rectangle-2" x="50" y="12" width="167" height="8" rx="4"></rect><circle id="Oval" cx="16" cy="16" r="16"></circle></g></g></g></g></svg></div><div style="margin-right:19px"><svg width="152px" height="32px" viewBox="0 0 152 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="CL/Nav-Header/Loader" transform="translate(-1203.000000, -12.000000)" fill="#ECECEC" fill-rule="nonzero"><g id="Nav-Header"><g id="Group-2" transform="translate(1203.000000, 12.000000)"><circle id="Oval" cx="96" cy="16" r="16"></circle><circle id="Oval-Copy-2" cx="56" cy="16" r="16"></circle><circle id="Oval-Copy-3" cx="16" cy="16" r="16"></circle><circle id="Oval-Copy" cx="136" cy="16" r="16"></circle></g></g></g></g></svg></div></div></div><div id="root"><div class="Toastify"></div><div class="Toastify"></div><div class="flex-full"><div class="h-percent-100"><header class="position-absolute w-percent-100 bg-white-smoke br-b-xs" style="box-sizing: border-box; top: 0px; height: 56px; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px 0px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 3px 3px -2px;"><div class="flex-hbox flex-main-space-around flex-cross-center" style="padding: 10px; height: 56px;"><div><svg width="141px" height="28px" viewBox="0 0 141 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="CL/Nav-Header/Loader-Learning-Screen" transform="translate(-16.000000, -14.000000)"><g id="Nav-Header"><g id="Group-2" transform="translate(16.000000, 12.000000)"><g id="Learning-Scr-Content-Loader"><g id="Left-loader" transform="translate(0.000000, 2.000000)"><g id="Group-5" transform="translate(59.000000, 0.000000)"><rect id="Rectangle-2" stroke="#E3E3E3" stroke-width="2" fill-rule="nonzero" x="1" y="1" width="80" height="26" rx="4"></rect><rect id="Rectangle" fill="#E3E3E3" x="8" y="13" width="66" height="3" rx="1.5"></rect></g><rect id="Rectangle-2" fill="#E3E3E3" fill-rule="nonzero" x="0" y="0" width="20" height="28" rx="4"></rect></g></g></g></g></g></g></svg></div><div style="flex-grow: 1; text-align: center; margin-left: 110px;"><svg width="148px" height="28px" viewBox="0 0 148 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="CL/Nav-Header/Loader-Learning-Screen" transform="translate(-619.000000, -14.000000)"><g id="Nav-Header"><g id="Group-2" transform="translate(16.000000, 12.000000)"><g id="Learning-Scr-Content-Loader"><g id="Center-loader" transform="translate(603.000000, 2.000000)"><g id="Group-4"><rect id="Rectangle-2" stroke="#E3E3E3" stroke-width="2" fill-rule="nonzero" x="1" y="1" width="68" height="26" rx="4"></rect><rect id="Rectangle" fill="#E3E3E3" x="8" y="13" width="54" height="3" rx="1.5"></rect></g><g id="Group-4-Copy" transform="translate(78.000000, 0.000000)"><rect id="Rectangle-2" stroke="#E3E3E3" stroke-width="2" fill-rule="nonzero" x="1" y="1" width="68" height="26" rx="4"></rect><rect id="Rectangle" fill="#E3E3E3" x="8" y="13" width="54" height="3" rx="1.5"></rect></g></g></g></g></g></g></g></svg></div><div><svg width="253px" height="32px" viewBox="0 0 253 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="CL/Nav-Header/Loader-Learning-Screen" transform="translate(-1102.000000, -12.000000)" fill="#E3E3E3" fill-rule="nonzero"><g id="Nav-Header"><g id="Group-2" transform="translate(16.000000, 12.000000)"><g id="Learning-Scr-Content-Loader"><g id="Group-3" transform="translate(1086.000000, 0.000000)"><circle id="Oval" cx="197" cy="16" r="16"></circle><circle id="Oval-Copy-2" cx="157" cy="16" r="16"></circle><circle id="Oval-Copy-3" cx="117" cy="16" r="16"></circle><circle id="Oval-Copy" cx="237" cy="16" r="16"></circle><rect id="Rectangle-2-Copy" x="0" y="4" width="85" height="25" rx="12.5"></rect></g></g></g></g></g></g></svg></div></div></header><div class=""><div><div class="h-vh-100 overflow-hidden"><header class="jss40 jss42 jss32 jss33 jss37 mui-fixed  br-b-xs"><div class="jss67 jss69 jss68"><div class="flex-full flex-hbox"><div class="flex-hbox flex-cross-center flex-full"><div class="jss71 jss79 jss90"><div class="jss72 jss130"><button tabindex="0" class="jss191 jss167 jss169 jss172 jss21" type="button"><span class="jss168"><i class="fal fa-chevron-left text-primary"></i></span><span class="jss194"></span></button><div class="jss22"><button tabindex="0" class="jss191 jss167 jss169 jss170 jss175 jss188 bg-white" type="button"><span class="jss168"><i class="fal fa-bars"></i><span class="pd-l-sm">Outline</span></span><span class="jss194"></span></button></div></div><div class="jss72 jss130"><div class="flex-hbox flex-main-center"><button tabindex="0" class="jss191 jss167 jss169 jss170 jss175 jss188 mr-r-sm bg-white w-px-70" type="button"><span class="jss168"><i class="fal fa-chevron-left"></i><span class="pd-l-sm">Prev</span></span><span class="jss194"></span></button><button tabindex="0" class="jss191 jss167 jss169 jss170 jss175 jss188 bg-white w-px-70" type="button"><span class="jss168"><span class="pd-r-sm">Next</span><i class="fal fa-chevron-right"></i></span><span class="jss194"></span></button></div></div><div class="jss72 jss130"><div class="flex-hbox flex-cross-center flex-main-end"><div class="mr-r-sm br-radius-lg bg-mercury pd-tb-xs pd-lr-sm" title="Overall program points"><span class="fal fa-trophy-alt text-primary mr-r-sm"></span><span class="text-primary font-caption">0</span></div><div><button tabindex="0" class="jss191 jss208" type="button" title="Help &amp; Support"><span class="jss213"><span class="material-icons jss214" aria-hidden="true"><i class="fal fa-ticket-alt text-primary"></i></span></span><span class="jss194"></span></button></div><div class="mr-r-sm"><div class="cursor-pointer"><span class="jss226"><div><button tabindex="0" class="jss191 jss208" type="button" title="Notifications"><span class="jss213"><span class="material-icons jss214" aria-hidden="true"><i class="fal fa-bell jss223"></i></span></span><span class="jss194"></span></button></div><span class="jss227 jss222 bg-error">4</span></span></div></div><div class="position-relative display-inline-block cursor-pointer"><div class="flex-hbox flex-cross-center"><div class="overflow-hidden position-relative avatar-square-sm br-radius-circle   bg-bluegrey flex-vbox flex-main-center flex-cross-center"><div class="">PS</div></div></div></div></div></div></div></div></div></div></header><div class="jss27 jss29"><div class="h-percent-100"><div class="h-percent-100 scroll-v" style="padding-bottom: 56px;"><div class="mr-t-md"><div class="flex-hbox flex-cross-center"><div class="flex-full"><div class="flex-vbox flex-cross-center mxw-vw-100"><div class="w-percent-70"><div class="pd-b-md"><div class="flex-hbox flex-cross-center flex-nowrap w-percent-100"><div class="flex-hbox flex-cross-center flex-nowrap" style="max-width: calc(100% - 250px);"><span title="26WoDS :: Data Preprocessing &amp; Feature Engineering " class="cursor-pointer link-text mxw-px-200 display-inline ellipsis">26WoDS :: Data Preprocessing &amp; Feature Engineering </span><span class="pd-lr-sm fal fa-angle-right"></span></div><div class="flex-hbox flex-cross-center flex-nowrap" style="max-width: calc(100% - 250px);"><span title="Data Preprocessing &amp; Feature Engineering" class="flex-full display-inline ellipsis" style="max-width: 100%;">Data Preprocessing &amp; Feature Engineering</span></div></div></div><div class="font-headline underline-primary-lg mr-b-lg">WEEK-11 RESOURCES<span class="pd-l-sm font-caption text-faintgrey">(1/1)</span></div><div class="jss40 jss44 jss41 paper"><div class="paper-content"><div class="mde-preview"><div class="mde-preview-content"><p>Welcome to the Eleventh Week of the online study-plan 26-Weeks-Of-Data-Science powered by GreyAtom. Last week we learnt about Advanced Linear Regression, this week we would be focusing on Data Preprocessing and Feature Engineering.
+Till now, all the datasets that you have been using were structured so well that you could directly begin building your model after EDA without having to structure your data. Structuring your data to suit your model is known as Data Preprocesing, without which your model may not give a good result. Another important part of the Data Science Pipeline is Feature Engineering which involves the creation of new features.
+This week you would be learning different Data Preprocessing techniques used for missing value treatment, outlier detection,scaling etc. and also how to engineer new features. Also we have some bonus study material on PCA, do go through that!</p>
+<hr>
+<h1 id="tableofcontents">Table of Contents</h1>
+<ol>
+<li>
+Data Preprocessing &amp; Feature Engineering</li>
+<li>
+BONUS STUDY MATERIAL</li>
+<li>
+Solutions to the Mini-Challenges of WEEK-10</li>
+<li>
+VIDEO :: Career Switch stories - Vishnu Kamath's Testament</li>
+<li>
+VIDEO :: Who are the instructors at GreyAtom?</li>
+<li>
+CHEATSHEET :: Data Preprocessing</li>
+<li>
+GOOD READ :: How Not To be Wrong : The Hidden Maths of Everyday Life</li>
+<li>
+GLIMPSE OF NEXT WEEK :: Feature Selection</li>
+</ol>
+<hr>
+<h2 id="datapreprocessingandfeatureengineering">Data Preprocessing and Feature Engineering.</h2>
+<p>This notebook covers different procedures that are part of Data Preprocessing and the different methods that can be used to accomplish those procedures. Along with that you would learn how to create new features from the existing features in your dataset such that these new features would improve your model.
+Along with the conceptual description, we'll also be implementing these concepts on code. This should give you the necessary knack of applying the same methods on real life datasets.
+<br></p>
+<div style="text-align: center;">
+                              <a href="https://github.com/MayureshShilotri/26-Weeks-Of-Data-Science/blob/master/Week-11-Feature_Engineering/notebooks/Week-11%20Notebook.ipynb" class="btn-hover color-3" style="text-align: center; background-color: rgb(84, 61, 152); padding: 12px 15px; border: 0px; border-radius: 4px; box-shadow: rgb(153, 153, 153) 2px 2px 2px; font-weight: bold;">GET YOUR NOTEBOOK</a>
+                           </div>
+<p><br></p>
+<hr>
+<h2 id="bonusmaterialpca">BONUS MATERIAL :: PCA.</h2>
+<p>Principal Component Analysis is a dimensionality reduction technique that can be used to solve the curse of dimensionality problem. In the notebook below you can find a python implementation of PCA.
+<br></p>
+<div style="text-align: center;">
+                            <a href="https://github.com/MayureshShilotri/26-Weeks-Of-Data-Science/blob/master/Week-11-Feature_Engineering_crucible/Dimensionality%20Reduction%20-%20PCA.ipynb" class="btn-hover color-3" style="text-align: center; background-color: rgb(84, 61, 152); padding: 12px 15px; border: 0px; border-radius: 4px; box-shadow: rgb(153, 153, 153) 2px 2px 2px; font-weight: bold;">GET YOUR NOTEBOOK</a>
+                         </div>
+<p><br></p>
+<hr>
+<h2 id="solutionstotheminichallengesofweek10">Solutions to the Mini-Challenges of WEEK-10</h2>
+<p>You learnt about Advanced Linear Regression, specifically Lasso, Ridge and ElasticNet Regression in Week-10.You learnt how these regularization techniques help avoid overfitting.
+Hope you were able to complete the mini-challenges, if not you can find the solution to the challenges below.</p>
+<pre class="code-block"><code class="hljs python language-python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> mean_squared_error
+</code></pre>
+<pre class="code-block"><code class="hljs python language-python"><span class="hljs-comment"># Loading the data for Mini-Challenges</span>
+df = pd.read_csv(<span class="hljs-string">'../data/auto.csv'</span>)
+mpg = df.iloc[:,<span class="hljs-number">0</span>]
+df.drop([<span class="hljs-string">'origin'</span>,<span class="hljs-string">'mpg'</span>],axis=<span class="hljs-number">1</span>,inplace=<span class="hljs-keyword">True</span>)
+df = pd.concat([df,mpg],axis=<span class="hljs-number">1</span>)
+df.head()
+</code></pre>
+<div>
+<style scoped="">
+   .dataframe tbody tr th:only-of-type {
+       vertical-align: middle;
+   }
+   .dataframe tbody tr th {
+       vertical-align: top;
+   }
+   .dataframe thead th {
+       text-align: right;
+   }
+</style>
+<table border="1" class="dataframe">
+ <thead>
+   <tr style="text-align: right;">
+     <th></th>
+     <th>displ</th>
+     <th>hp</th>
+     <th>weight</th>
+     <th>accel</th>
+     <th>size</th>
+     <th>mpg</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <th>0</th>
+     <td>250.0</td>
+     <td>88</td>
+     <td>3139</td>
+     <td>14.5</td>
+     <td>15.0</td>
+     <td>18.0</td>
+   </tr>
+   <tr>
+     <th>1</th>
+     <td>304.0</td>
+     <td>193</td>
+     <td>4732</td>
+     <td>18.5</td>
+     <td>20.0</td>
+     <td>9.0</td>
+   </tr>
+   <tr>
+     <th>2</th>
+     <td>91.0</td>
+     <td>60</td>
+     <td>1800</td>
+     <td>16.4</td>
+     <td>10.0</td>
+     <td>36.1</td>
+   </tr>
+   <tr>
+     <th>3</th>
+     <td>250.0</td>
+     <td>98</td>
+     <td>3525</td>
+     <td>19.0</td>
+     <td>15.0</td>
+     <td>18.5</td>
+   </tr>
+   <tr>
+     <th>4</th>
+     <td>97.0</td>
+     <td>78</td>
+     <td>2188</td>
+     <td>15.8</td>
+     <td>10.0</td>
+     <td>34.3</td>
+   </tr>
+ </tbody>
+</table>
+</div>
+<h3 id="minichallenge1">Mini Challenge - 1</h3>
+<hr>
+<p>Perform a Hold-Out cross-validation by splitting the data into train and test with <code>random_state=9</code> and <code>test_size = 0.2</code></p>
+<pre class="code-block"><code class="hljs python language-python"><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split <span class="hljs-keyword">as</span> tts
+X = df.iloc[:,:<span class="hljs-number">-1</span>]
+y = df.iloc[:,<span class="hljs-number">-1</span>]
+X_train,X_test,y_train,y_test = tts(X,y,test_size=<span class="hljs-number">0.2</span>,random_state=<span class="hljs-number">9</span>)
+</code></pre>
+<h3 id="minichallenge2">Mini Challenge - 2</h3>
+<hr>
+<p>Fit a Linear Regression model on the validated dataset above and find the mean squared error for linear regression.</p>
+<pre class="code-block"><code class="hljs python language-python"><span class="hljs-keyword">from</span> sklearn.linear_model <span class="hljs-keyword">import</span> LinearRegression
+linreg = LinearRegression()
+linreg.fit(X_train,y_train)
+y_pred_1 = linreg.predict(X_test)
+print(mean_squared_error(y_test,y_pred_1))
+</code></pre>
+<h2 id="output">Output</h2>
+<p>13.244277573105252</p>
+<h3 id="minichallenge3">Mini Challenge - 3</h3>
+<hr>
+<p>Fit a Lasso model on the same validated dataset having <code>alpha=140</code>, <code>max_iter=100000</code>, <code>random_state=9</code></p>
+<pre class="code-block"><code class="hljs python language-python"><span class="hljs-keyword">from</span> sklearn.linear_model <span class="hljs-keyword">import</span> Lasso
+lasso = Lasso(alpha=<span class="hljs-number">140</span>,max_iter=<span class="hljs-number">100000</span>, random_state=<span class="hljs-number">9</span>)
+lasso.fit(X_train,y_train)
+y_pred_2 = lasso.predict(X_test)
+print(mean_squared_error(y_test,y_pred_2))
+</code></pre>
+<h2 id="output-1">Output</h2>
+<p>13.696452547280678</p>
+<h3 id="minichallenge4">Mini Challenge - 4</h3>
+<hr>
+<p>Fit a Ridge model having <code>alpha=0.00001</code>, <code>max_iter=100000</code>, <code>random_state=9</code></p>
+<pre class="code-block"><code class="hljs python language-python"><span class="hljs-keyword">from</span> sklearn.linear_model <span class="hljs-keyword">import</span> Ridge
+ridge = Ridge(alpha=<span class="hljs-number">0.00001</span>, max_iter=<span class="hljs-number">100000</span>, random_state=<span class="hljs-number">9</span>)
+ridge.fit(X_train,y_train)
+y_pred_3 = ridge.predict(X_test)
+print(mean_squared_error(y_test,y_pred_3))
+</code></pre>
+<h2 id="output-2">Output</h2>
+<p>13.244277574130903</p>
+<h3 id="minichallenge5">Mini Challenge - 5</h3>
+<hr>
+<p>Perform a k-fold cross validation with parameter <code>cv=5</code> and model as linear regression and scoring parameter as neg<em>mean</em>squared_error.</p>
+<pre class="code-block"><code class="hljs python language-python"><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> cross_val_score
+cross_val_scores = cross_val_score(linreg,X,y,scoring=<span class="hljs-string">"neg_mean_squared_error"</span>,cv=<span class="hljs-number">5</span>)
+print(cross_val_scores.mean())
+</code></pre>
+<h2 id="output-3">Output</h2>
+<p>-18.224931954438755</p>
+<hr>
+<h2 id="videocareerswitchstoriesvishnukamathstestament">VIDEO :: Career Switch stories - Vishnu Kamath's Testament !</h2>
+<div class="w-percent-100 flex-hbox flex-cross-center flex-main-center">
+          <div class="flex-auto" style="width: 50%;">
+            <div style="width: 100%; max-width: 100%; overflow: hidden;"><iframe src="./GreyAtom - Data_Preprocessing_files/Aq_Zti3eJNg.html" width="100%" height="315px" frameborder="0" allowfullscreen=""></iframe></div>
+          </div>
+        </div>
+<p>Vishnu Kamath goes on to describe his successful journey with GreyAtom which helped him in acheiving the role of a Data Scientist in the company Nielsen``
+He says that only 20% of Data Science can be understood studying, the remaining 80% comes from hands-on practice which GreyAtom provided him with. He also talks about how the Capstone project on real-life datasets helped apply what he learnt by allowing him to design,build and deploy a model from scratch under the guidance of Instructors at GreyAtom .</p>
+<hr>
+<h1 id="videowhoaretheinstructorsatgreyatom">VIDEO :: Who are the Instructors at GreyAtom ?</h1>
+<div class="w-percent-100 flex-hbox flex-cross-center flex-main-center">
+          <div class="flex-auto" style="width: 50%;">
+            <div style="width: 100%; max-width: 100%; overflow: hidden;"><iframe src="./GreyAtom - Data_Preprocessing_files/GFYPpixFMOk.html" width="100%" height="315px" frameborder="0" allowfullscreen=""></iframe></div>
+          </div>
+        </div>
+<p>n this video, cofounder of GreyAtom Mayuresh Shilotri explains the scrutiny that is involved in the selection of an Instructor at GreyAtom so that the learners learn from the best. Watch as he explains the five key criterias on which GreyAtom evaluates an Instructor before selecting him as a teacher for the learners.
+These criterias include the Instructor's expertise on the subject,relevant experience in the particular field, communication skills and domain knowledge.</p>
+<hr>
+<h2 id="cheatsheetdatapreprocessing">CHEATSHEET :: Data Preprocessing</h2>
+<p>Below is the cheatsheet for the topic of the day!</p>
+<div class="w-percent-100 flex-hbox flex-cross-center flex-main-center">
+          <div class="flex-auto" style="width: 100%;">
+            <div style="width: 100%; max-width: 100%; overflow: hidden;"><p><img src="./GreyAtom - Data_Preprocessing_files/file.png" alt="cs_3"></p></div>
+          </div>
+        </div>
+<hr>
+<h2 id="hownottobewrongthehiddenmathsofeverydaylifejordanellenberg">How Not To be Wrong: The Hidden Maths of Everyday Life - Jordan Ellenberg</h2>
+<div class="w-percent-100 flex-hbox flex-cross-center flex-main-center">
+          <div class="flex-auto" style="width: 30%;">
+            <div style="width: 100%; max-width: 100%; overflow: hidden;"><p><img src="./GreyAtom - Data_Preprocessing_files/how_not_to_be_wrong.png" alt="book_1"></p></div>
+          </div>
+        </div>
+<p>How Not to Be Wrong presents the surprising revelations behind all of these questions and many more, using the mathematician’s method of analyzing life and exposing the hard-won insights of the academic community to the layman—minus the jargon. Ellenberg chases mathematical threads through a vast range of time and space, from the everyday to the cosmic, encountering, among other things, baseball, Reaganomics, daring lottery schemes, Voltaire, the replicability crisis in psychology, Italian Renaissance painting, artificial languages, the development of non-Euclidean geometry, the coming obesity apocalypse, Antonin Scalia’s views on crime and punishment, the psychology of slime molds, what Facebook can and can’t figure out about you, and the existence of God.</p>
+<hr>
+<h2 id="glimpseofnextweekfeatureselection">GLIMPSE OF NEXT WEEK :: Feature Selection</h2>
+<p>Next week you would be learning about Feature Selection, we would cover the importance and various aspects of feature selection alongside the three important methods involved in it which are - Filter, Wrapper and Embedded.</p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div id="modalContainer"></div></div><script>!function(i){function e(e){for(var t,r,n=e[0],o=e[1],c=e[2],a=0,u=[];a<n.length;a++)r=n[a],l[r]&&u.push(l[r][0]),l[r]=0;for(t in o)Object.prototype.hasOwnProperty.call(o,t)&&(i[t]=o[t]);for(d&&d(e);u.length;)u.shift()();return s.push.apply(s,c||[]),f()}function f(){for(var e,t=0;t<s.length;t++){for(var r=s[t],n=!0,o=1;o<r.length;o++){var c=r[o];0!==l[c]&&(n=!1)}n&&(s.splice(t--,1),e=p(p.s=r[0]))}return e}var r={},l={17:0},s=[];function p(e){if(r[e])return r[e].exports;var t=r[e]={i:e,l:!1,exports:{}};return i[e].call(t.exports,t,t.exports,p),t.l=!0,t.exports}p.e=function(c){var e=[],r=l[c];if(0!==r)if(r)e.push(r[2]);else{var t=new Promise(function(e,t){r=l[c]=[e,t]});e.push(r[2]=t);var n,o=document.getElementsByTagName("head")[0],a=document.createElement("script");a.charset="utf-8",a.timeout=120,p.nc&&a.setAttribute("nonce",p.nc),a.src=p.p+"static/js/"+({4:"content",6:"launch",7:"learnAndTeach",10:"home",11:"settings",12:"subscription",13:"learner",14:"ecosystem"}[c]||c)+"."+{0:"6d1cd8ab",1:"c166370b",2:"0a044ab3",3:"49f559fc",4:"ff360c50",5:"6c5651c7",6:"1d7fbb48",7:"4a3216ad",8:"65c1c8ca",10:"ac24c160",11:"36d4b1cb",12:"86f58c60",13:"0fcda7c5",14:"1216f7d6",16:"499dfc0f"}[c]+".chunk.js",n=function(e){a.onerror=a.onload=null,clearTimeout(u);var t=l[c];if(0!==t){if(t){var r=e&&("load"===e.type?"missing":e.type),n=e&&e.target&&e.target.src,o=new Error("Loading chunk "+c+" failed.\n("+r+": "+n+")");o.type=r,o.request=n,t[1](o)}l[c]=void 0}};var u=setTimeout(function(){n({type:"timeout",target:a})},12e4);a.onerror=a.onload=n,o.appendChild(a)}return Promise.all(e)},p.m=i,p.c=r,p.d=function(e,t,r){p.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},p.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},p.t=function(t,e){if(1&e&&(t=p(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(p.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var n in t)p.d(r,n,function(e){return t[e]}.bind(null,n));return r},p.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return p.d(t,"a",t),t},p.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},p.p="/",p.oe=function(e){throw console.error(e),e};var t=window.webpackJsonp=window.webpackJsonp||[],n=t.push.bind(t);t.push=e,t=t.slice();for(var o=0;o<t.length;o++)e(t[o]);var d=n;f()}([])</script><script src="./GreyAtom - Data_Preprocessing_files/15.ec021c7b.chunk.js.download"></script><script src="./GreyAtom - Data_Preprocessing_files/main.28c1c18c.chunk.js.download"></script><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./GreyAtom - Data_Preprocessing_files/box-90f3a29ef7448451db5af955688970d7.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe></body></html>

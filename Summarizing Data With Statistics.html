@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<!-- saved from url=(0174)https://barclays.greyatom.com/fs/learn/programs/f6c8fb1a-c494-4f11-bb4c-1f10659c23bd/concepts/c0c0251d-4ebe-4574-8750-d7d335fd5ce3/topics/d73f926a-2e1f-4aab-a698-ac4452354559 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><script type="text/javascript" async="" src="./Summarizing Data With Statistics_files/a.js.download"></script><script async="" src="./Summarizing Data With Statistics_files/analytics.js.download"></script><script>!function(t,h,e,j,s,n){t.hj=t.hj||function(){(t.hj.q=t.hj.q||[]).push(arguments)},t._hjSettings={hjid:1303806,hjsv:6},s=h.getElementsByTagName("head")[0],(n=h.createElement("script")).async=1,n.src="https://static.hotjar.com/c/hotjar-"+t._hjSettings.hjid+".js?sv="+t._hjSettings.hjsv,s.appendChild(n)}(window,document)</script><script async="" src="./Summarizing Data With Statistics_files/hotjar-1303806.js.download"></script><link rel="manifest" href="https://barclays.greyatom.com/manifest.json"><link rel="shortcut icon" href="https://barclays.greyatom.com/favicon.ico?v=1"><style>.wrapper{display:flex;height:100vh;flex-direction:column;justify-content:center}.wrapper-content{align-self:center}.mascot-logo{float:left;width:85px}.loader-content{float:left;width:300px;font-family:Roboto,Helvetica,Arial,sans-serif;font-size:14px;color:#444;margin-top:5px;margin-left:20px;background:#fff;border:1px solid #ddd;padding:15px 20px;border-radius:4px;position:relative;line-height:24px}.loader-content:before{content:"";width:0;height:0;position:absolute;border-left:10px solid transparent;border-right:10px solid #ddd;border-top:10px solid transparent;border-bottom:10px solid transparent;left:-21px;top:39%}.loader-content:after{content:"";width:0;height:0;position:absolute;border-left:10px solid transparent;border-right:10px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;left:-20px;top:39%}</style><script type="text/javascript">!function(e,a,t,n,c,g,o){e.GoogleAnalyticsObject=c,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,g=a.createElement(t),o=a.getElementsByTagName(t)[0],g.async=1,g.src="https://www.google-analytics.com/analytics.js",o.parentNode.insertBefore(g,o)}(window,document,"script",0,"ga"),ga("create","UA-119538005-2","auto")</script><script type="text/javascript">var clevertap={event:[],profile:[],account:[],onUserLogin:[],notifications:[],privacy:[]};clevertap.account.push({id:"WWR-97Z-R45Z"}),clevertap.privacy.push({optOut:!1}),clevertap.privacy.push({useIP:!1}),function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https://d2r1yp2w7bby2u.cloudfront.net":"http://static.clevertap.com")+"/js/a.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}()</script><script type="text/javascript" src="./Summarizing Data With Statistics_files/loader.js.download"></script><script type="text/javascript">require.config({paths:{vs:"https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.16.2/min/vs"}});var uriData="     self.MonacoEnvironment = { baseUrl: 'https://cdnjs.cloudflare.com/ajax/libsmonaco-editor/0.16.2/min/vs'};     importScripts('https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.16.2/min/vs/base/worker/workerMain.js');   ";function initMonacoEditor(t,n,a){require(["vs/editor/editor.main"],function(){var o=monaco.editor.create(t,n);o.updateOptions({autoIndent:!0,formatOnPaste:!0,formatOnType:!0}),a(o)})}window.MonacoEnvironment={getWorkerUrl:function(o,t){return"data:text/javascript;charset=utf-8,"+encodeURIComponent(uriData)}}</script><title>GreyAtom - Learning Platform</title><link href="./Summarizing Data With Statistics_files/15.3ff0fcd2.chunk.css" rel="stylesheet"><link rel="stylesheet" type="text/css" data-name="vs/editor/editor.main" href="./Summarizing Data With Statistics_files/editor.main.css"><link href="./Summarizing Data With Statistics_files/main.05f2c3a7.chunk.css" rel="stylesheet"><style data-emotion=""></style><style data-styled-components=""></style><style data-jss="" data-meta="MuiPaper">
+.jss2622 {
+  background-color: #fff;
+}
+.jss2623 {
+  border-radius: 4px;
+}
+.jss2624 {
+  box-shadow: none;
+}
+.jss2625 {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+.jss2626 {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+.jss2627 {
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+}
+.jss2628 {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.jss2629 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+}
+.jss2630 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+.jss2631 {
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+}
+.jss2632 {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.jss2633 {
+  box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+}
+.jss2634 {
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+}
+.jss2635 {
+  box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12);
+}
+.jss2636 {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+}
+.jss2637 {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12);
+}
+.jss2638 {
+  box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12);
+}
+.jss2639 {
+  box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12);
+}
+.jss2640 {
+  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+}
+.jss2641 {
+  box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12);
+}
+.jss2642 {
+  box-shadow: 0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12);
+}
+.jss2643 {
+  box-shadow: 0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12);
+}
+.jss2644 {
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12);
+}
+.jss2645 {
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12);
+}
+.jss2646 {
+  box-shadow: 0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12);
+}
+.jss2647 {
+  box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12);
+}
+.jss2648 {
+  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+</style><style data-jss="" data-meta="MuiAppBar">
+.jss2614 {
+  width: 100%;
+  display: flex;
+  z-index: 1100;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.jss2615 {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: fixed;
+}
+.jss2616 {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: absolute;
+}
+.jss2617 {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: sticky;
+}
+.jss2618 {
+  position: static;
+}
+.jss2619 {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f5f5f5;
+}
+.jss2620 {
+  color: #fff;
+  background-color: #1335e2;
+}
+.jss2621 {
+  color: #fff;
+  background-color: #388e3c;
+}
+</style><style data-jss="" data-meta="MuiBadge">
+.jss2808 {
+  display: inline-flex;
+  position: relative;
+  vertical-align: middle;
+}
+.jss2809 {
+  top: -12px;
+  right: -12px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  align-items: center;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  align-content: center;
+  border-radius: 50%;
+  flex-direction: row;
+  justify-content: center;
+}
+.jss2810 {
+  color: #fff;
+  background-color: #1335e2;
+}
+.jss2811 {
+  color: #fff;
+  background-color: #388e3c;
+}
+.jss2812 {
+  color: #fff;
+  background-color: #f44336;
+}
+</style><style data-jss="" data-meta="MuiTouchRipple">
+.jss2776 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  position: absolute;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.jss2777 {
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  position: absolute;
+}
+.jss2778 {
+  opacity: 0.3;
+  transform: scale(1);
+  animation: mui-ripple-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.jss2779 {
+  animation-duration: 200ms;
+}
+.jss2780 {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: block;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.jss2781 {
+  opacity: 0;
+  animation: mui-ripple-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.jss2782 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: mui-ripple-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@-webkit-keyframes mui-ripple-enter {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes mui-ripple-exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes mui-ripple-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style><style data-jss="" data-meta="MuiButtonBase">
+.jss2773 {
+  color: inherit;
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+  display: inline-flex;
+  outline: none;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  justify-content: center;
+  -moz-appearance: none;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.jss2773::-moz-focus-inner {
+  border-style: none;
+}
+.jss2773.jss2774 {
+  cursor: default;
+  pointer-events: none;
+}
+</style><style data-jss="" data-meta="MuiButton">
+.jss2749 {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 8px 16px;
+  font-size: 14px;
+  min-width: auto;
+  box-sizing: border-box;
+  min-height: 36px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.4em;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.jss2749:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.jss2749.jss2767 {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .jss2749:hover {
+    background-color: transparent;
+  }
+}
+.jss2749:hover.jss2767 {
+  background-color: transparent;
+}
+.jss2750 {
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.jss2752 {
+  color: #1335e2;
+}
+.jss2752:hover {
+  background-color: rgba(19, 53, 226, 0.08);
+}
+@media (hover: none) {
+  .jss2752:hover {
+    background-color: transparent;
+  }
+}
+.jss2753 {
+  color: #388e3c;
+}
+.jss2753:hover {
+  background-color: rgba(56, 142, 60, 0.08);
+}
+@media (hover: none) {
+  .jss2753:hover {
+    background-color: transparent;
+  }
+}
+.jss2757 {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+}
+.jss2758 {
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  background-color: #e0e0e0;
+}
+.jss2758.jss2766 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+.jss2758:active {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.jss2758.jss2767 {
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.jss2758:hover {
+  background-color: #d5d5d5;
+}
+@media (hover: none) {
+  .jss2758:hover {
+    background-color: #e0e0e0;
+  }
+}
+.jss2758:hover.jss2767 {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.jss2759 {
+  color: #fff;
+  background-color: #1335e2;
+}
+.jss2759:hover {
+  background-color: #1d2480;
+}
+@media (hover: none) {
+  .jss2759:hover {
+    background-color: #1335e2;
+  }
+}
+.jss2760 {
+  color: #fff;
+  background-color: #388e3c;
+}
+.jss2760:hover {
+  background-color: #1b5e20;
+}
+@media (hover: none) {
+  .jss2760:hover {
+    background-color: #388e3c;
+  }
+}
+.jss2764 {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  min-width: 0;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+}
+.jss2764:active {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+}
+.jss2765 {
+  width: auto;
+  height: 48px;
+  padding: 0 16px;
+  min-width: 48px;
+  border-radius: 24px;
+}
+.jss2768 {
+  color: inherit;
+}
+.jss2769 {
+  width: 40px;
+  height: 40px;
+}
+.jss2770 {
+  padding: 7px 8px;
+  min-width: auto;
+  font-size: 0.8125rem;
+  min-height: 32px;
+}
+.jss2771 {
+  padding: 8px 24px;
+  min-width: 112px;
+  font-size: 0.9375rem;
+  min-height: 40px;
+}
+.jss2772 {
+  width: 100%;
+}
+</style><style data-jss="" data-meta="MuiIconButton">
+.jss2790 {
+  flex: 0 0 auto;
+  width: 40px;
+  color: rgba(0, 0, 0, 0.54);
+  height: 40px;
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;
+}
+.jss2790:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.jss2790.jss2794 {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .jss2790:hover {
+    background-color: transparent;
+  }
+}
+.jss2790:hover.jss2794 {
+  background-color: transparent;
+}
+.jss2791 {
+  color: inherit;
+}
+.jss2792 {
+  color: #1335e2;
+}
+.jss2792:hover {
+  background-color: rgba(19, 53, 226, 0.08);
+}
+@media (hover: none) {
+  .jss2792:hover {
+    background-color: transparent;
+  }
+}
+.jss2793 {
+  color: #388e3c;
+}
+.jss2793:hover {
+  background-color: rgba(56, 142, 60, 0.08);
+}
+@media (hover: none) {
+  .jss2793:hover {
+    background-color: transparent;
+  }
+}
+.jss2795 {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+</style><style data-jss="" data-meta="MuiCssBaseline">
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+</style><style data-jss="" data-meta="MuiModal">
+.jss2827 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1300;
+  position: fixed;
+}
+.jss2828 {
+  visibility: hidden;
+}
+</style><style data-jss="" data-meta="MuiDrawer">
+.jss2816 {
+  flex: 0 0 auto;
+}
+.jss2817 {
+  top: 0;
+  flex: 1 0 auto;
+  height: 100vh;
+  display: flex;
+  z-index: 1200;
+  outline: none;
+  position: fixed;
+  overflow-y: auto;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+}
+.jss2818 {
+  left: 0;
+  right: auto;
+}
+.jss2819 {
+  left: auto;
+  right: 0;
+}
+.jss2820 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  height: auto;
+  max-height: 100vh;
+}
+.jss2821 {
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  max-height: 100vh;
+}
+.jss2822 {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+.jss2823 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.jss2824 {
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+.jss2825 {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+</style><style data-jss="" data-meta="MuiGrid">
+.jss2653 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.jss2654 {
+  margin: 0;
+  box-sizing: border-box;
+}
+.jss2655 {
+  min-width: 0;
+}
+.jss2656 {
+  flex-direction: column;
+}
+.jss2657 {
+  flex-direction: column-reverse;
+}
+.jss2658 {
+  flex-direction: row-reverse;
+}
+.jss2659 {
+  flex-wrap: nowrap;
+}
+.jss2660 {
+  flex-wrap: wrap-reverse;
+}
+.jss2661 {
+  align-items: center;
+}
+.jss2662 {
+  align-items: flex-start;
+}
+.jss2663 {
+  align-items: flex-end;
+}
+.jss2664 {
+  align-items: baseline;
+}
+.jss2665 {
+  align-content: center;
+}
+.jss2666 {
+  align-content: flex-start;
+}
+.jss2667 {
+  align-content: flex-end;
+}
+.jss2668 {
+  align-content: space-between;
+}
+.jss2669 {
+  align-content: space-around;
+}
+.jss2670 {
+  justify-content: center;
+}
+.jss2671 {
+  justify-content: flex-end;
+}
+.jss2672 {
+  justify-content: space-between;
+}
+.jss2673 {
+  justify-content: space-around;
+}
+.jss2674 {
+  width: calc(100% + 8px);
+  margin: -4px;
+}
+.jss2674 > .jss2654 {
+  padding: 4px;
+}
+.jss2675 {
+  width: calc(100% + 16px);
+  margin: -8px;
+}
+.jss2675 > .jss2654 {
+  padding: 8px;
+}
+.jss2676 {
+  width: calc(100% + 24px);
+  margin: -12px;
+}
+.jss2676 > .jss2654 {
+  padding: 12px;
+}
+.jss2677 {
+  width: calc(100% + 32px);
+  margin: -16px;
+}
+.jss2677 > .jss2654 {
+  padding: 16px;
+}
+.jss2678 {
+  width: calc(100% + 40px);
+  margin: -20px;
+}
+.jss2678 > .jss2654 {
+  padding: 20px;
+}
+.jss2679 {
+  flex-grow: 0;
+  max-width: none;
+  flex-basis: auto;
+}
+.jss2680 {
+  flex-grow: 1;
+  max-width: 100%;
+  flex-basis: 0;
+}
+.jss2681 {
+  flex-grow: 0;
+  max-width: 8.33333%;
+  flex-basis: 8.33333%;
+}
+.jss2682 {
+  flex-grow: 0;
+  max-width: 16.66667%;
+  flex-basis: 16.66667%;
+}
+.jss2683 {
+  flex-grow: 0;
+  max-width: 25%;
+  flex-basis: 25%;
+}
+.jss2684 {
+  flex-grow: 0;
+  max-width: 33.33333%;
+  flex-basis: 33.33333%;
+}
+.jss2685 {
+  flex-grow: 0;
+  max-width: 41.66667%;
+  flex-basis: 41.66667%;
+}
+.jss2686 {
+  flex-grow: 0;
+  max-width: 50%;
+  flex-basis: 50%;
+}
+.jss2687 {
+  flex-grow: 0;
+  max-width: 58.33333%;
+  flex-basis: 58.33333%;
+}
+.jss2688 {
+  flex-grow: 0;
+  max-width: 66.66667%;
+  flex-basis: 66.66667%;
+}
+.jss2689 {
+  flex-grow: 0;
+  max-width: 75%;
+  flex-basis: 75%;
+}
+.jss2690 {
+  flex-grow: 0;
+  max-width: 83.33333%;
+  flex-basis: 83.33333%;
+}
+.jss2691 {
+  flex-grow: 0;
+  max-width: 91.66667%;
+  flex-basis: 91.66667%;
+}
+.jss2692 {
+  flex-grow: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+@media (min-width:600px) {
+  .jss2693 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .jss2694 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .jss2695 {
+    flex-grow: 0;
+    max-width: 8.33333%;
+    flex-basis: 8.33333%;
+  }
+  .jss2696 {
+    flex-grow: 0;
+    max-width: 16.66667%;
+    flex-basis: 16.66667%;
+  }
+  .jss2697 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .jss2698 {
+    flex-grow: 0;
+    max-width: 33.33333%;
+    flex-basis: 33.33333%;
+  }
+  .jss2699 {
+    flex-grow: 0;
+    max-width: 41.66667%;
+    flex-basis: 41.66667%;
+  }
+  .jss2700 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .jss2701 {
+    flex-grow: 0;
+    max-width: 58.33333%;
+    flex-basis: 58.33333%;
+  }
+  .jss2702 {
+    flex-grow: 0;
+    max-width: 66.66667%;
+    flex-basis: 66.66667%;
+  }
+  .jss2703 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .jss2704 {
+    flex-grow: 0;
+    max-width: 83.33333%;
+    flex-basis: 83.33333%;
+  }
+  .jss2705 {
+    flex-grow: 0;
+    max-width: 91.66667%;
+    flex-basis: 91.66667%;
+  }
+  .jss2706 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:960px) {
+  .jss2707 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .jss2708 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .jss2709 {
+    flex-grow: 0;
+    max-width: 8.33333%;
+    flex-basis: 8.33333%;
+  }
+  .jss2710 {
+    flex-grow: 0;
+    max-width: 16.66667%;
+    flex-basis: 16.66667%;
+  }
+  .jss2711 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .jss2712 {
+    flex-grow: 0;
+    max-width: 33.33333%;
+    flex-basis: 33.33333%;
+  }
+  .jss2713 {
+    flex-grow: 0;
+    max-width: 41.66667%;
+    flex-basis: 41.66667%;
+  }
+  .jss2714 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .jss2715 {
+    flex-grow: 0;
+    max-width: 58.33333%;
+    flex-basis: 58.33333%;
+  }
+  .jss2716 {
+    flex-grow: 0;
+    max-width: 66.66667%;
+    flex-basis: 66.66667%;
+  }
+  .jss2717 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .jss2718 {
+    flex-grow: 0;
+    max-width: 83.33333%;
+    flex-basis: 83.33333%;
+  }
+  .jss2719 {
+    flex-grow: 0;
+    max-width: 91.66667%;
+    flex-basis: 91.66667%;
+  }
+  .jss2720 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1280px) {
+  .jss2721 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .jss2722 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .jss2723 {
+    flex-grow: 0;
+    max-width: 8.33333%;
+    flex-basis: 8.33333%;
+  }
+  .jss2724 {
+    flex-grow: 0;
+    max-width: 16.66667%;
+    flex-basis: 16.66667%;
+  }
+  .jss2725 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .jss2726 {
+    flex-grow: 0;
+    max-width: 33.33333%;
+    flex-basis: 33.33333%;
+  }
+  .jss2727 {
+    flex-grow: 0;
+    max-width: 41.66667%;
+    flex-basis: 41.66667%;
+  }
+  .jss2728 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .jss2729 {
+    flex-grow: 0;
+    max-width: 58.33333%;
+    flex-basis: 58.33333%;
+  }
+  .jss2730 {
+    flex-grow: 0;
+    max-width: 66.66667%;
+    flex-basis: 66.66667%;
+  }
+  .jss2731 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .jss2732 {
+    flex-grow: 0;
+    max-width: 83.33333%;
+    flex-basis: 83.33333%;
+  }
+  .jss2733 {
+    flex-grow: 0;
+    max-width: 91.66667%;
+    flex-basis: 91.66667%;
+  }
+  .jss2734 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1920px) {
+  .jss2735 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .jss2736 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .jss2737 {
+    flex-grow: 0;
+    max-width: 8.33333%;
+    flex-basis: 8.33333%;
+  }
+  .jss2738 {
+    flex-grow: 0;
+    max-width: 16.66667%;
+    flex-basis: 16.66667%;
+  }
+  .jss2739 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .jss2740 {
+    flex-grow: 0;
+    max-width: 33.33333%;
+    flex-basis: 33.33333%;
+  }
+  .jss2741 {
+    flex-grow: 0;
+    max-width: 41.66667%;
+    flex-basis: 41.66667%;
+  }
+  .jss2742 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .jss2743 {
+    flex-grow: 0;
+    max-width: 58.33333%;
+    flex-basis: 58.33333%;
+  }
+  .jss2744 {
+    flex-grow: 0;
+    max-width: 66.66667%;
+    flex-basis: 66.66667%;
+  }
+  .jss2745 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .jss2746 {
+    flex-grow: 0;
+    max-width: 83.33333%;
+    flex-basis: 83.33333%;
+  }
+  .jss2747 {
+    flex-grow: 0;
+    max-width: 91.66667%;
+    flex-basis: 91.66667%;
+  }
+  .jss2748 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+</style><style data-jss="" data-meta="MuiIcon">
+.jss2796 {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  font-size: 16px;
+  user-select: none;
+  flex-shrink: 0;
+}
+.jss2797 {
+  color: #1335e2;
+}
+.jss2798 {
+  color: #388e3c;
+}
+.jss2799 {
+  color: rgba(0, 0, 0, 0.54);
+}
+.jss2800 {
+  color: #f44336;
+}
+.jss2801 {
+  color: rgba(0, 0, 0, 0.26);
+}
+.jss2802 {
+  font-size: inherit;
+}
+</style><style data-jss="" data-meta="MuiSnackbar">
+.jss3221 {
+  left: 0;
+  right: 0;
+  z-index: 1400;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+.jss3222 {
+  top: 0;
+}
+@media (min-width:960px) {
+  .jss3222 {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+.jss3223 {
+  bottom: 0;
+}
+@media (min-width:960px) {
+  .jss3223 {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+.jss3224 {
+  top: 0;
+  justify-content: flex-end;
+}
+@media (min-width:960px) {
+  .jss3224 {
+    top: 24px;
+    left: auto;
+    right: 24px;
+  }
+}
+.jss3225 {
+  bottom: 0;
+  justify-content: flex-end;
+}
+@media (min-width:960px) {
+  .jss3225 {
+    left: auto;
+    right: 24px;
+    bottom: 24px;
+  }
+}
+.jss3226 {
+  top: 0;
+  justify-content: flex-start;
+}
+@media (min-width:960px) {
+  .jss3226 {
+    top: 24px;
+    left: 24px;
+    right: auto;
+  }
+}
+.jss3227 {
+  bottom: 0;
+  justify-content: flex-start;
+}
+@media (min-width:960px) {
+  .jss3227 {
+    left: 24px;
+    right: auto;
+    bottom: 24px;
+  }
+}
+</style><style data-jss="" data-meta="MuiToolbar">
+.jss2649 {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .jss2649 {
+    min-height: 56px;
+  }
+}
+.jss2650 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width:600px) {
+  .jss2650 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.jss2651 {
+  min-height: 56px;
+}
+@media (min-width:0px) and (orientation: landscape) {
+  .jss2651 {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .jss2651 {
+    min-height: 64px;
+  }
+}
+@media (min-width: 600px) {
+  .jss2651 {
+    min-height: 56px;
+  }
+}
+.jss2652 {
+  min-height: 48px;
+}
+</style><style data-jss="" data-meta="MuiTooltip">
+.jss2783 {
+  z-index: 1500;
+  opacity: 0.9;
+}
+.jss2784 {
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.625rem;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1.4em;
+  border-radius: 4px;
+  background-color: #616161;
+}
+.jss2785 {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  line-height: 1.14286em;
+}
+.jss2786 {
+  margin: 0 24px ;
+  transform-origin: right center;
+}
+@media (min-width:600px) {
+  .jss2786 {
+    margin: 0 14px;
+  }
+}
+.jss2787 {
+  margin: 0 24px;
+  transform-origin: left center;
+}
+@media (min-width:600px) {
+  .jss2787 {
+    margin: 0 14px;
+  }
+}
+.jss2788 {
+  margin: 24px 0;
+  transform-origin: center bottom;
+}
+@media (min-width:600px) {
+  .jss2788 {
+    margin: 14px 0;
+  }
+}
+.jss2789 {
+  margin: 24px 0;
+  transform-origin: center top;
+}
+@media (min-width:600px) {
+  .jss2789 {
+    margin: 14px 0;
+  }
+}
+</style><style data-jss="">
+.jss2814 {
+  width: 100%;
+  height: 100%;
+}
+.jss2815 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+</style><style data-jss="">
+
+</style><style data-jss="">
+.jss2595 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 56px);
+  z-index: 1099;
+  position: fixed;
+  background: #fafafa;
+  margin-top: 56px;
+}
+</style><style data-jss="">
+
+</style><style data-jss="">
+.jss2813 {
+  color: #6a2c81;
+}
+</style><style data-jss="">
+.jss2803 {
+  top: -2px !important;
+  left: -54px !important;
+  width: 350px;
+  z-index: 1100;
+}
+.jss2804 {
+  top: 2px !important;
+  left: 19px !important;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+}
+.jss2805 {
+  margin: 0 !important;
+  font-size: 16px;
+}
+.jss2806 {
+  line-height: 1.4 !important;
+}
+.jss2807 {
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+</style><style data-jss="">
+
+</style><style data-jss="">
+.jss2612 {
+  height: 100vh;
+  position: relative;
+  padding-top: 56px;
+}
+.jss2613 {
+  z-index: 1099;
+  background: #fafafa;
+}
+</style><style data-jss="">
+.jss2605 {
+  padding-top: 56px;
+}
+.jss2606 {
+  top: 0;
+  left: 0;
+  width: 50px;
+  border: 0;
+  bottom: 0;
+  position: absolute;
+  font-size: 22px;
+  text-align: center;
+  background: #ececec;
+  line-height: 53px;
+  padding-top: 5px;
+  border-right: 1px solid #ddd;
+  border-radius: 0;
+}
+.jss2606:hover {
+  background-color: rgb(228,228,228);
+}
+.jss2607 {
+  margin-left: 50px;
+}
+.jss2608 {
+  border-color: rgba(221, 221, 221, .3);
+}
+.jss2609:hover {
+  background-color: rgba(41, 55, 65);
+}
+.jss2609:hover div.text-opaque {
+  color: #5bc0de !important;
+}
+.jss2610 {
+  color: #cccccc;
+  padding: 2px 5px;
+  font-size: 10px;
+  min-height: auto;
+  border-color: #cccccc;
+}
+.jss2610:hover {
+  background-color: #2c3c49;
+}
+.jss2611 {
+  padding: 8px 16px 8px 13px;
+  border-left: 3px solid #5bc0de;
+}
+</style><style data-jss="">
+
+</style><style data-jss="">
+
+</style><style data-jss="">
+
+</style><style data-jss="">
+
+</style><style data-jss="">
+
+</style><style data-jss="">
+
+</style><script async="" src="./Summarizing Data With Statistics_files/modules.a14f4fa0b5403157e4ed.js.download"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script type="text/javascript" src="./Summarizing Data With Statistics_files/a" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(1)" rel="nofollow" async=""></script><script charset="utf-8" src="./Summarizing Data With Statistics_files/1.7bf078b7.chunk.js.download"></script><script charset="utf-8" src="./Summarizing Data With Statistics_files/2.d623c426.chunk.js.download"></script><script charset="utf-8" src="./Summarizing Data With Statistics_files/8.37060c29.chunk.js.download"></script><script charset="utf-8" src="./Summarizing Data With Statistics_files/0.0b20a415.chunk.js.download"></script><script charset="utf-8" src="./Summarizing Data With Statistics_files/learnAndTeach.e914d0c9.chunk.js.download"></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(2)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(3)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(4)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(5)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(6)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(7)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(8)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(9)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(10)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(11)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(12)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(13)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(14)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(15)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(16)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(17)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(18)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(19)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(20)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(21)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(22)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(23)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(24)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(25)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(26)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(27)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(28)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(29)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(30)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(31)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(32)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(33)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(34)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(35)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(36)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(37)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(38)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(39)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(40)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(41)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(42)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(43)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(44)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(45)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(46)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(47)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(48)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(49)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(50)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(51)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(52)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(53)" rel="nofollow" async=""></script><script async="async" type="text/javascript" src="./Summarizing Data With Statistics_files/editor.main.js.download"></script><script async="async" type="text/javascript" src="./Summarizing Data With Statistics_files/editor.main.nls.js.download"></script><style type="text/css" media="screen" class="monaco-colors">.monaco-editor .minimap-slider, .monaco-editor .minimap-slider .minimap-slider-horizontal { background: rgba(121, 121, 121, 0.2); }
+.monaco-editor .minimap-slider:hover, .monaco-editor .minimap-slider:hover .minimap-slider-horizontal { background: rgba(100, 100, 100, 0.35); }
+.monaco-editor .minimap-slider.active, .monaco-editor .minimap-slider.active .minimap-slider-horizontal { background: rgba(191, 191, 191, 0.2); }
+.monaco-editor .minimap-shadow-visible { box-shadow: #000000 -6px 0 6px -6px inset; }
+.monaco-editor .scroll-decoration { box-shadow: #000000 0 6px 6px -6px inset; }
+.monaco-editor .focused .selected-text { background-color: #264f78; }
+.monaco-editor .selected-text { background-color: #3a3d41; }
+.monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input { background-color: #1e1e1e; }
+.monaco-editor, .monaco-editor .inputarea.ime-input { color: #d4d4d4; }
+.monaco-editor .margin { background-color: #1e1e1e; }
+.monaco-editor .rangeHighlight { background-color: rgba(255, 255, 255, 0.04); }
+.vs-whitespace { color: rgba(227, 228, 226, 0.16) !important; }
+.monaco-editor .view-overlays .current-line { border: 2px solid #282828; }
+.monaco-editor .margin-view-overlays .current-line-margin { border: 2px solid #282828; }
+.monaco-editor .lines-content .cigr { box-shadow: 1px 0 0 0 #404040 inset; }
+.monaco-editor .lines-content .cigra { box-shadow: 1px 0 0 0 #707070 inset; }
+.monaco-editor .line-numbers { color: #858585; }
+.monaco-editor .current-line ~ .line-numbers { color: #c6c6c6; }
+.monaco-editor .view-ruler { box-shadow: 1px 0 0 0 #5a5a5a inset; }
+.monaco-editor .cursor { background-color: #aeafad; border-color: #aeafad; color: #515052; }
+.monaco-editor .squiggly-error { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23ea4646'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-warning { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%234d9e4d'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-info { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23008000'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-hint { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%223%22%20width%3D%2212%22%3E%3Cg%20fill%3D%22rgba(238%2C%20238%2C%20238%2C%200.7)%22%3E%3Ccircle%20cx%3D%221%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%229%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat bottom left; }
+.showUnused .monaco-editor .squiggly-inline-unnecessary { opacity: 0.667; }
+.monaco-editor.vs .valueSetReplacement { outline: solid 2px #888888; }
+.monaco-diff-editor .diff-review-line-number { color: #858585; }
+.monaco-diff-editor .diff-review-shadow { box-shadow: #000000 0 -6px 6px -6px inset; }
+.monaco-editor .line-insert, .monaco-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-diff-editor .line-insert, .monaco-diff-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .inline-added-margin-view-zone { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .line-delete, .monaco-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor .line-delete, .monaco-diff-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-editor .inline-deleted-margin-view-zone { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor.side-by-side .editor.modified { box-shadow: -6px 0 5px -5px #000000; }
+.monaco-editor .bracket-match { background-color: rgba(0, 100, 0, 0.1); }
+.monaco-editor .bracket-match { border: 1px solid #888888; }
+.monaco-editor .codelens-decoration { color: #999999; }
+.monaco-editor .codelens-decoration > a:hover { color: #4e94ce !important; }
+.monaco-editor .findOptionsWidget { background-color: #252526; }
+.monaco-editor .findOptionsWidget { box-shadow: 0 2px 8px #000000; }
+.monaco-editor .findMatch { background-color: rgba(234, 92, 0, 0.33); }
+.monaco-editor .currentFindMatch { background-color: #515c6a; }
+.monaco-editor .findScope { background-color: rgba(58, 61, 65, 0.4); }
+.monaco-editor .find-widget { background-color: #252526; }
+.monaco-editor .find-widget { box-shadow: 0 2px 8px #000000; }
+.monaco-editor .find-widget.no-results .matchesCount { color: #f48771; }
+.monaco-editor .find-widget .monaco-sash { background-color: #454545; width: 3px !important; margin-left: -4px;}
+.monaco-editor .find-widget .monaco-checkbox .checkbox:checked + .label { border: 1px solid #007acc; }
+.monaco-editor .detected-link-active { color: #4e94ce !important; }
+.monaco-editor .monaco-editor-overlaymessage .anchor { border-top-color: #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { border: 1px solid #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { background-color: #063b49; }
+.monaco-editor .parameter-hints-widget { border: 1px solid #454545; }
+.monaco-editor .parameter-hints-widget.multiple .body { border-left: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .parameter-hints-widget .signature.has-docs { border-bottom: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .parameter-hints-widget { background-color: #252526; }
+.monaco-editor .parameter-hints-widget a { color: #3794ff; }
+.monaco-editor .parameter-hints-widget code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor .snippet-placeholder { background-color: rgba(124, 124, 124, 0.3); outline-color: transparent; }
+.monaco-editor .finish-snippet-placeholder { background-color: transparent; outline-color: #525252; }
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight { color: #0097fb; }
+.monaco-editor .suggest-widget { color: #d4d4d4; }
+.monaco-editor .suggest-widget a { color: #3794ff; }
+.monaco-editor .suggest-widget code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor .focused .selectionHighlight { background-color: rgba(173, 214, 255, 0.15); }
+.monaco-editor .selectionHighlight { background-color: rgba(173, 214, 255, 0.07); }
+.monaco-editor .wordHighlight { background-color: rgba(87, 87, 87, 0.72); }
+.monaco-editor .wordHighlightStrong { background-color: rgba(0, 73, 114, 0.72); }
+.monaco-editor .accessibilityHelpWidget { background-color: #252526; }
+.monaco-editor .accessibilityHelpWidget { box-shadow: 0 2px 8px #000000; }
+.monaco-editor .tokens-inspect-widget { border: 1px solid #454545; }
+.monaco-editor .tokens-inspect-widget .tokens-inspect-separator { background-color: #454545; }
+.monaco-editor .tokens-inspect-widget { background-color: #252526; }
+.monaco-editor .reference-zone-widget .ref-tree .referenceMatch { background-color: rgba(234, 92, 0, 0.3); }
+.monaco-editor .reference-zone-widget .preview .reference-decoration { background-color: rgba(255, 143, 0, 0.6); }
+.monaco-editor .reference-zone-widget .ref-tree { background-color: #252526; }
+.monaco-editor .reference-zone-widget .ref-tree { color: #bbbbbb; }
+.monaco-editor .reference-zone-widget .ref-tree .reference-file { color: #ffffff; }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .monaco-list-rows > .monaco-list-row.selected:not(.highlighted) { background-color: rgba(51, 153, 255, 0.2); }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .monaco-list-rows > .monaco-list-row.selected:not(.highlighted) { color: #ffffff !important; }
+.monaco-editor .reference-zone-widget .preview .monaco-editor .monaco-editor-background,.monaco-editor .reference-zone-widget .preview .monaco-editor .inputarea.ime-input {	background-color: #001f33;}
+.monaco-editor .reference-zone-widget .preview .monaco-editor .margin {	background-color: #001f33;}
+.monaco-editor .marker-widget a { color: #3794ff; }
+.monaco-editor .hoverHighlight { background-color: rgba(38, 79, 120, 0.25); }
+.monaco-editor .monaco-editor-hover { background-color: #252526; }
+.monaco-editor .monaco-editor-hover { border: 1px solid #454545; }
+.monaco-editor .monaco-editor-hover .hover-row:not(:first-child):not(:empty) { border-top: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-editor-hover hr { border-top: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-editor-hover hr { border-bottom: 0px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-editor-hover a { color: #3794ff; }
+.monaco-editor .monaco-editor-hover .hover-row .actions { background-color: #2c2c2d; }
+.monaco-editor .monaco-editor-hover code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor .goto-definition-link { color: #4e94ce !important; }
+
+.mtk1 { color: #d4d4d4; }
+.mtk2 { color: #1e1e1e; }
+.mtk3 { color: #cc6666; }
+.mtk4 { color: #9cdcfe; }
+.mtk5 { color: #ce9178; }
+.mtk6 { color: #b5cea8; }
+.mtk7 { color: #608b4e; }
+.mtk8 { color: #569cd6; }
+.mtk9 { color: #dcdcdc; }
+.mtk10 { color: #808080; }
+.mtk11 { color: #f44747; }
+.mtk12 { color: #c586c0; }
+.mtk13 { color: #a79873; }
+.mtk14 { color: #dd6a6f; }
+.mtk15 { color: #5bb498; }
+.mtk16 { color: #909090; }
+.mtk17 { color: #778899; }
+.mtk18 { color: #ff00ff; }
+.mtk19 { color: #b46695; }
+.mtk20 { color: #ff0000; }
+.mtk21 { color: #4f76ac; }
+.mtk22 { color: #3dc9b0; }
+.mtk23 { color: #74b0df; }
+.mtk24 { color: #4864aa; }
+.mtki { font-style: italic; }
+.mtkb { font-weight: bold; }
+.mtku { text-decoration: underline; text-underline-position: under; }</style><style type="text/css" media="screen"></style><script async="async" type="text/javascript" src="./Summarizing Data With Statistics_files/python.js.download"></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(54)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(55)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(56)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(57)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(58)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(59)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(60)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(61)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(62)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(63)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(64)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(65)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(66)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(67)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(68)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(69)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(70)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(71)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(72)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(73)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(74)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(75)" rel="nofollow" async=""></script><script type="text/javascript" src="./Summarizing Data With Statistics_files/a(76)" rel="nofollow" async=""></script></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"><div class="flex-full"><div class="h-percent-100"><div class=""><div><div class="h-vh-100 overflow-hidden"><header class="jss2622 jss2624 jss2614 jss2615 jss2619 mui-fixed  br-b-xs"><div class="jss2649 jss2651 jss2650"><div class="flex-full flex-hbox"><div class="flex-hbox flex-cross-center flex-full"><div class="jss2653 jss2661 jss2672"><div class="jss2654 jss2712"><button tabindex="0" class="jss2773 jss2749 jss2751 jss2754 jss2606" type="button"><span class="jss2750"><i class="fal fa-chevron-left text-primary"></i></span><span class="jss2776"></span></button><div class="jss2607"><button tabindex="0" class="jss2773 jss2749 jss2751 jss2752 jss2757 jss2770 bg-white" type="button"><span class="jss2750"><i class="fal fa-bars"></i><span class="pd-l-sm">Outline</span></span><span class="jss2776"></span></button></div></div><div class="jss2654 jss2712"><div class="flex-hbox flex-main-center"><button tabindex="0" class="jss2773 jss2749 jss2751 jss2752 jss2757 jss2770 mr-r-sm bg-white w-px-70" type="button"><span class="jss2750"><i class="fal fa-chevron-left"></i><span class="pd-l-sm">Prev</span></span><span class="jss2776"></span></button><button tabindex="0" class="jss2773 jss2749 jss2751 jss2752 jss2757 jss2770 bg-white w-px-70" type="button"><span class="jss2750"><span class="pd-r-sm">Next</span><i class="fal fa-chevron-right"></i></span><span class="jss2776"></span></button></div></div><div class="jss2654 jss2712"><div class="flex-hbox flex-cross-center flex-main-end"><div class="mr-r-sm br-radius-lg bg-mercury pd-tb-xs pd-lr-sm" title="Overall program points"><span class="fal fa-trophy-alt text-primary mr-r-sm"></span><span class="text-primary font-caption">40,031</span></div><div class="mr-lr-sm"><button tabindex="0" class="jss2773 jss2790" type="button" title="Dashboard"><span class="jss2795"><span class="material-icons jss2796" aria-hidden="true"><i class="fal fa-chart-line text-primary"></i></span></span><span class="jss2776"></span></button></div><div><button tabindex="0" class="jss2773 jss2790" type="button" title="Help &amp; Support"><span class="jss2795"><span class="material-icons jss2796" aria-hidden="true"><i class="fal fa-ticket-alt text-primary"></i></span></span><span class="jss2776"></span></button></div><div class="mr-r-sm"><div class="cursor-pointer"><span class="jss2808"><div><button tabindex="0" class="jss2773 jss2790" type="button" title="Notifications"><span class="jss2795"><span class="material-icons jss2796" aria-hidden="true"><i class="fal fa-bell jss2805"></i></span></span><span class="jss2776"></span></button></div><span class="jss2809 jss2804 bg-error">3</span></span></div></div><div class="position-relative display-inline-block cursor-pointer"><div class="flex-hbox flex-cross-center"><div class="overflow-hidden position-relative avatar-square-sm br-radius-circle   bg-bluegrey flex-vbox flex-main-center flex-cross-center"><div class="">PS</div></div></div></div></div></div></div></div></div></div></header><div class="jss2612"><div class="h-percent-100"><div class="h-percent-100 scroll-v" style="padding-bottom: 56px;"><div class="mr-t-md"><div class="flex-hbox flex-cross-center"><div class="flex-full"><div class="flex-vbox flex-cross-center mxw-vw-100"><div class="w-percent-70"><div class="pd-b-md"><div class="flex-hbox flex-cross-center flex-nowrap w-percent-100"><div class="flex-hbox flex-cross-center flex-nowrap" style="max-width: calc(100% - 250px);"><span title="Summarizing Data with Statistics" class="cursor-pointer link-text mxw-px-200 display-inline ellipsis">Summarizing Data with Statistics</span><span class="pd-lr-sm fal fa-angle-right"></span></div><div class="flex-hbox flex-cross-center flex-nowrap" style="max-width: calc(100% - 250px);"><span title="Concept in a Glance" class="flex-full display-inline ellipsis" style="max-width: 100%;">Concept in a Glance</span></div></div></div><div class="font-headline underline-primary-lg mr-b-lg">Cheatsheet :: Descriptive Statistics<span class="pd-l-sm font-caption text-faintgrey">(1/2)</span></div><div class="jss2622 jss2626 jss2623 paper"><div class="paper-content"><div class="mde-preview"><div class="mde-preview-content"><div class="w-percent-100 flex-hbox flex-cross-center flex-main-center">
+          <div class="flex-auto" style="width: 100%;">
+            <div style="width: 100%; max-width: 100%; overflow: hidden;"><p><img src="./Summarizing Data With Statistics_files/file.png" alt="Descriptive_Statistics.png"></p></div>
+          </div>
+        </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div id="modalContainer"><div id="i9ilY" class=""></div><div id="kBLX8" class=""></div><div id="Owc8h" class=""></div><div id="cXVdC" class=""></div></div></div><script>!function(i){function e(e){for(var t,r,n=e[0],o=e[1],c=e[2],u=0,a=[];u<n.length;u++)r=n[u],l[r]&&a.push(l[r][0]),l[r]=0;for(t in o)Object.prototype.hasOwnProperty.call(o,t)&&(i[t]=o[t]);for(d&&d(e);a.length;)a.shift()();return s.push.apply(s,c||[]),f()}function f(){for(var e,t=0;t<s.length;t++){for(var r=s[t],n=!0,o=1;o<r.length;o++){var c=r[o];0!==l[c]&&(n=!1)}n&&(s.splice(t--,1),e=p(p.s=r[0]))}return e}var r={},l={17:0},s=[];function p(e){if(r[e])return r[e].exports;var t=r[e]={i:e,l:!1,exports:{}};return i[e].call(t.exports,t,t.exports,p),t.l=!0,t.exports}p.e=function(c){var e=[],r=l[c];if(0!==r)if(r)e.push(r[2]);else{var t=new Promise(function(e,t){r=l[c]=[e,t]});e.push(r[2]=t);var n,o=document.getElementsByTagName("head")[0],u=document.createElement("script");u.charset="utf-8",u.timeout=120,p.nc&&u.setAttribute("nonce",p.nc),u.src=p.p+"static/js/"+({4:"content",6:"launch",7:"learnAndTeach",10:"home",11:"settings",12:"subscription",13:"learner",14:"ecosystem"}[c]||c)+"."+{0:"0b20a415",1:"7bf078b7",2:"d623c426",3:"77cc82fa",4:"6731b8c8",5:"bc57c600",6:"60b532c4",7:"e914d0c9",8:"37060c29",10:"6933ee96",11:"d8de46ff",12:"75b43c26",13:"42b10072",14:"d38f8ae4",16:"648513f6"}[c]+".chunk.js",n=function(e){u.onerror=u.onload=null,clearTimeout(a);var t=l[c];if(0!==t){if(t){var r=e&&("load"===e.type?"missing":e.type),n=e&&e.target&&e.target.src,o=new Error("Loading chunk "+c+" failed.\n("+r+": "+n+")");o.type=r,o.request=n,t[1](o)}l[c]=void 0}};var a=setTimeout(function(){n({type:"timeout",target:u})},12e4);u.onerror=u.onload=n,o.appendChild(u)}return Promise.all(e)},p.m=i,p.c=r,p.d=function(e,t,r){p.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},p.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},p.t=function(t,e){if(1&e&&(t=p(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(p.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var n in t)p.d(r,n,function(e){return t[e]}.bind(null,n));return r},p.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return p.d(t,"a",t),t},p.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},p.p="/",p.oe=function(e){throw console.error(e),e};var t=window.webpackJsonp=window.webpackJsonp||[],n=t.push.bind(t);t.push=e,t=t.slice();for(var o=0;o<t.length;o++)e(t[o]);var d=n;f()}([])</script><script src="./Summarizing Data With Statistics_files/15.a6b7bdf5.chunk.js.download"></script><script src="./Summarizing Data With Statistics_files/main.d4643fa5.chunk.js.download"></script><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./Summarizing Data With Statistics_files/box-90f3a29ef7448451db5af955688970d7.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div id="ads"></div><div class="monaco-aria-container"><div class="monaco-alert" role="alert" aria-atomic="true" style="visibility: visible;">Accepting 'covariance1' did insert the following text: covariance1</div><div class="monaco-status" role="status" aria-atomic="true"></div></div></body></html>
